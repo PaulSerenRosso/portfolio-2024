@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc0bdc80-5516-412d-a98a-039ceb97e116" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Logo_PSR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/ProjectsOverview.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Rocket.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Rocket10.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Rocket7.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Rocket8.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/Rocket9.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/public/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/assets/fonts/Lexend-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/EndRedirector.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/LettersAnimation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainImage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainParagraph.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainQuote.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainTitle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MainVideo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/MenuBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/PageTitle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/PopupContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/PropPopup.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/PropRender.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/RadialGradient.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/ScrollingTrigger.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/SlideInAnimation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/Subtitle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/TvBorder.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/TvGallery.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/containers/AboutMeContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/containers/ResumeContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/components/containers/WelcomeContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/composables/PropSlideInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/composables/Scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/store/CSSStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/styles/globalFonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/styles/globalMixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/styles/globalVariables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/views/ContactsView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio-2024/src/views/ProjectsOverviewView.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Options API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2piS97vwVtfSVoCNyEDQr5RZOUJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Data_Paul/portfolio-2024/portfolio-2024/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Options API Component&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\public" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src\components" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\public" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src\assets" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src\assets\fonts" />
+      <recent name="C:\Data_Paul\portfolio-2024\portfolio-2024\src\composables" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc0bdc80-5516-412d-a98a-039ceb97e116" name="Changes" comment="" />
+      <created>1733247248418</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733247248418</updated>
+      <workItem from="1733247249456" duration="5087000" />
+      <workItem from="1733333949066" duration="614000" />
+      <workItem from="1733508047489" duration="4000" />
+      <workItem from="1733665793186" duration="13628000" />
+      <workItem from="1733777071223" duration="5217000" />
+      <workItem from="1733852515837" duration="5295000" />
+      <workItem from="1734025462897" duration="4948000" />
+      <workItem from="1734711286175" duration="21483000" />
+      <workItem from="1734804287253" duration="1699000" />
+      <workItem from="1734819160915" duration="7128000" />
+      <workItem from="1734872927864" duration="3030000" />
+      <workItem from="1734907817815" duration="609000" />
+      <workItem from="1735052886792" duration="3068000" />
+      <workItem from="1735084547843" duration="3249000" />
+      <workItem from="1735122435529" duration="6295000" />
+      <workItem from="1735141823874" duration="2853000" />
+      <workItem from="1735164411573" duration="614000" />
+      <workItem from="1735167187714" duration="2860000" />
+      <workItem from="1735232466863" duration="7961000" />
+      <workItem from="1735378477866" duration="6824000" />
+      <workItem from="1735471603357" duration="6849000" />
+      <workItem from="1735551761002" duration="1315000" />
+      <workItem from="1735597857840" duration="1789000" />
+      <workItem from="1735637674844" duration="15071000" />
+      <workItem from="1735753821434" duration="4443000" />
+      <workItem from="1735770264639" duration="3797000" />
+      <workItem from="1735986225757" duration="9928000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
