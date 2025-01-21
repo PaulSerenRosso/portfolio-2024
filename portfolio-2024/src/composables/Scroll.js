@@ -1,13 +1,7 @@
-
-
 export function activateScroll() {
-
-    document.documentElement.style.overflow ='';
-
-
+  document.documentElement.style.overflow = ''
 }
 
 export function deactivateScroll() {
-    document.documentElement.style.overflow ='hidden';
-
+  document.documentElement.style.overflow = 'hidden'
 }

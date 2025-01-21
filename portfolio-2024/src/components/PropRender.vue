@@ -12,13 +12,16 @@ export default defineComponent({
 
 <template>
 
-    <img class="prop-render" :src="this.src" ></img>
+  <img class="prop-render" :src="this.src">
 </template>
 
 <style scoped>
-.prop-render{
+.prop-render {
+
 
   aspect-ratio: 1/1;
   height: auto;
+  user-select: none; /* Prevents text selection */
+  pointer-events: none; /* Disables mouse interaction */
 }
 </style>
