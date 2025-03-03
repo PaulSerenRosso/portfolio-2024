@@ -1,103 +1,101 @@
-<script >
-
-
-
-import TvBorder from "@/components/TvBorder.vue";
-import MainButton from "@/components/MainButton.vue";
+<script>
+import TvBorder from '@/components/TvBorder.vue'
+import MainButton from '@/components/MainButton.vue'
 
 export default {
-  name: "TvGallery",
+  name: 'TvGallery',
   components: {
     TvBorder,
     MainButton,
   },
   data() {
     return {
-
       contentIndex: 0,
-      contents : [],
-
+      contents: [],
     }
   },
-  props:{
-    tvGalleryId:String,
+  props: {
+    tvGalleryId: String,
     keyEvent: String,
     delay: Number,
   },
   mounted() {
-    this.contents = this.$refs.slotContainer.children;
-    this.hideContent();
-    this.setDisplayContent(true, this.contentIndex);
-
+    this.contents = this.$refs.slotContainer.children
+    this.hideContent()
+    this.setDisplayContent(true, this.contentIndex)
   },
-  methods:{
-    hideContent (){
+  methods: {
+    hideContent() {
       for (let i = 0; i < this.contents.length; i++) {
-        this.setDisplayContent(false, i );
+        this.setDisplayContent(false, i)
       }
     },
-    setDisplayContent(isDisplay, index){
-      this.contents[index].style.display = isDisplay ? "flex":"none";
-      if(this.contents[index].classList.contains("main-video")){
-        if(isDisplay){
-          this.contents[index].currentTime = 0;
-        }
-        else{
-          this.contents[index].muted = true;
-
+    setDisplayContent(isDisplay, index) {
+      this.contents[index].style.display = isDisplay ? 'flex' : 'none'
+      if (this.contents[index].classList.contains('main-video')) {
+        if (isDisplay) {
+          this.contents[index].currentTime = 0
+        } else {
+          this.contents[index].muted = true
         }
       }
-
     },
-    incrementContentIndex(){
-      this.setDisplayContent(false, this.contentIndex);
-      this.contentIndex++;
-      if(this.contentIndex >= this.contents.length){
-        this.contentIndex = 0;
+    incrementContentIndex() {
+      this.setDisplayContent(false, this.contentIndex)
+      this.contentIndex++
+      if (this.contentIndex >= this.contents.length) {
+        this.contentIndex = 0
       }
-      this.setDisplayContent(true, this.contentIndex);
+      this.setDisplayContent(true, this.contentIndex)
     },
-    decrementContentIndex(){
-      this.setDisplayContent(false, this.contentIndex);
-      this.contentIndex--;
-      if(this.contentIndex < 0){
-        this.contentIndex = this.contents.length-1;
+    decrementContentIndex() {
+      this.setDisplayContent(false, this.contentIndex)
+      this.contentIndex--
+      if (this.contentIndex < 0) {
+        this.contentIndex = this.contents.length - 1
       }
-      this.setDisplayContent(true, this.contentIndex);
-    }
-  }
-  }
-
+      this.setDisplayContent(true, this.contentIndex)
+    },
+  },
+}
 </script>
 
 <template>
-<div>
-  <tv-border :key-event="this.keyEvent" :delay="this.delay"  :slotContainerId="this.tvGalleryId+'TvGallery'">
-    <div class="container-inside-border"   >
-
-      <div class="slot-container" :id="this.tvGalleryId+'TvGallery'" ref="slotContainer">
-        <slot></slot>
-
-
+  <div>
+    <tv-border
+      :key-event="this.keyEvent"
+      :delay="this.delay"
+      :slotContainerId="this.tvGalleryId + 'TvGallery'"
+    >
+      <div class="container-inside-border">
+        <div class="slot-container" :id="this.tvGalleryId + 'TvGallery'" ref="slotContainer">
+          <slot></slot>
+        </div>
       </div>
-
+    </tv-border>
+    <div class="gallery-footer">
+      <main-button
+        :key-event="this.keyEvent"
+        :delay="this.delay + 500"
+        class="gallery-button gallery-button-left"
+        @click="this.incrementContentIndex"
+      >
+        {{ '<' }}
+      </main-button>
+      <main-button
+        :key-event="this.keyEvent"
+        :delay="this.delay + 500"
+        class="gallery-button gallery-button-right"
+        @click="this.decrementContentIndex"
+      >
+        {{ '>' }}
+      </main-button>
     </div>
-  </tv-border>
-  <div class="gallery-footer">
-  <main-button :key-event="this.keyEvent"   :delay="this.delay+500" class="gallery-button gallery-button-left" @click="this.incrementContentIndex">
-    {{'<'}}
-  </main-button>
-  <main-button :key-event="this.keyEvent" :delay="this.delay+500" class="gallery-button gallery-button-right" @click="this.decrementContentIndex">
-    {{'>'}}
-  </main-button>
   </div>
-</div>
-
 </template>
 
 <style scoped>
-
-.gallery-footer{
+.gallery-footer {
   position: absolute;
 
   width: 100%;
@@ -107,29 +105,25 @@ export default {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   text-decoration: none;
-
-
 }
-.container-inside-border{
+
+.container-inside-border {
   height: 100%;
   width: 100%;
 }
-.slot-container{
+
+.slot-container {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.gallery-button{
 
+.gallery-button {
   top: 0%;
   background-color: white;
   width: 10%;
-  padding:0.5em ;
+  padding: 0.5em;
   margin-top: 0.5em;
-
-
 }
-
-
 </style>

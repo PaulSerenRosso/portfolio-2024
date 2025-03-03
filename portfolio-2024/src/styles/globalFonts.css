@@ -1,38 +1,46 @@
 @font-face {
-  font-family: MyBlack;
-  src: url(../assets/fonts/Lexend-Black.ttf);
+    font-family: MyBlack;
+    src: url(../assets/fonts/Lexend-Black.ttf);
 }
+
 @font-face {
-  font-family: MyBold;
-  src: url(../assets/fonts/Lexend-Bold.ttf);
+    font-family: MyBold;
+    src: url(../assets/fonts/Lexend-Bold.ttf);
 }
+
 @font-face {
-  font-family: MyExtraBold;
-  src: url(../assets/fonts/Lexend-ExtraBold.ttf);
+    font-family: MyExtraBold;
+    src: url(../assets/fonts/Lexend-ExtraBold.ttf);
 }
+
 @font-face {
-  font-family: MyExtraLight;
-  src: url(../assets/fonts/Lexend-ExtraLight.ttf);
+    font-family: MyExtraLight;
+    src: url(../assets/fonts/Lexend-ExtraLight.ttf);
 }
+
 @font-face {
-  font-family: MyLight;
-  src: url(../assets/fonts/Lexend-Light.ttf);
+    font-family: MyLight;
+    src: url(../assets/fonts/Lexend-Light.ttf);
 }
+
 @font-face {
-  font-family: MyMedium;
-  src: url(../assets/fonts/Lexend-Medium.ttf);
+    font-family: MyMedium;
+    src: url(../assets/fonts/Lexend-Medium.ttf);
 }
+
 @font-face {
-  font-family: MyRegular;
-  src: url(../assets/fonts/Lexend-Regular.ttf);
+    font-family: MyRegular;
+    src: url(../assets/fonts/Lexend-Regular.ttf);
 }
+
 @font-face {
-  font-family: MySemiBold;
-  src: url(../assets/fonts/Lexend-SemiBold.ttf);
+    font-family: MySemiBold;
+    src: url(../assets/fonts/Lexend-SemiBold.ttf);
 }
+
 @font-face {
-  font-family: MyThin;
-  src: url(../assets/fonts/Lexend-Thin.ttf);
+    font-family: MyThin;
+    src: url(../assets/fonts/Lexend-Thin.ttf);
 }
 
 /*# sourceMappingURL=globalFonts.css.map */
