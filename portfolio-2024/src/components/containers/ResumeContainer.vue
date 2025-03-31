@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <main-quote delay="1000" class="resume-title">Look at my resume, download it !</main-quote>
+  <main-quote delay="1000" class="resume-title">Look at my resume, download it!</main-quote>
   <div class="resume-container">
     <a
       class="resume-button"

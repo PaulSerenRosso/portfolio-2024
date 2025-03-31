@@ -25,19 +25,20 @@ export default defineComponent({
     ></page-title>
     <main-quote class="welcome-quote" :delay="2000">
       M2 Student Game Programming at Rubika / Looking for a 6-month end-of-studies internship from
-      June
+      July
     </main-quote>
-
     <div class="welcome-video">
-      <main-video delay="3000" src="ProjectsOverview.mp4"></main-video>
+      <main-video  :delay="2000" src="VQ0UPCY5XZY"></main-video>
     </div>
+
   </div>
+
 </template>
 
 <style scoped lang="scss">
 @include mobile-md() {
   .welcome-video {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -49,7 +50,8 @@ export default defineComponent({
 
 @include largeDesktop-md() {
   .welcome-video {
-    width: 10vh;
+    width: 120vh;
+    max-width: 90%;
   }
 }
 
@@ -57,6 +59,8 @@ export default defineComponent({
   .welcome-video {
     width: 120vh;
     max-width: 90%;
+
+
   }
 }
 

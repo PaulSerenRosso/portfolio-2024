@@ -7,8 +7,11 @@ import ScrollReset from "@/components/ScrollReset.vue";
 </script>
 
 <template>
-  <welcome-container></welcome-container>
+  <welcome-container>
+
+  </welcome-container>
   <div style="height: 20%"></div>
+
   <about-me-container></about-me-container>
   <resume-container></resume-container>
   <end-redirector

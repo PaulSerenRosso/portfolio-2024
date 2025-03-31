@@ -64,6 +64,14 @@ export default {
 .project-overview-root {
   padding-bottom: 0 !important;
   padding-top: 0 !important;
+
+}
+
+@include mobile-md() {
+  .project-overview-root {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 .project-overview-container {
   display: flex;

@@ -38,7 +38,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   height: auto;
-  padding-right: 50px !important;
+
   border-style: dotted;
   border-width: 5px;
   border-color: $main-black-color;
@@ -46,12 +46,9 @@ export default defineComponent({
   border-radius: 10px;
   padding-top: 70px !important;
 }
-</style>
 
-<style scoped lang="scss">
 .prop-render {
-  width: 200px;
-  padding-bottom: 10px;
+
   align-self: center;
   top: 0%;
   transform: translateY(-50%);
@@ -66,7 +63,63 @@ export default defineComponent({
 .paragraph {
   text-align: left;
 }
-.prop-popup-root{
-  padding-top: 50px !important;
+
+
+@include mobile-md() {
+  .prop-render {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+  .prop-popup-container {
+    padding-right: 10px !important;
+  }
+
+  .prop-popup-root{
+    padding-top: 70px !important;
+  }
 }
+
+@include tablet-md() {
+
+  .prop-popup-container {
+    padding-right: 10px !important;
+  }
+  .prop-render {
+    width: 230px;
+    padding-bottom: 20px;
+  }
+
+  .prop-popup-root{
+    padding-top: 80px !important;
+  }
+}
+
+@include desktop-md() {
+  .prop-render {
+    width: 250px;
+    padding-bottom: 25px;
+  }
+
+  .prop-popup-root{
+    padding-top: 80px !important;
+  }
+  .prop-popup-container {
+    padding-right: 50px !important;
+  }
+}
+
+@include largeDesktop-md() {
+  .prop-render {
+    width: 300px;
+    padding-bottom: 40px;
+  }
+
+  .prop-popup-root{
+    padding-top: 100px !important;
+  }
+  .prop-popup-container {
+    padding-right: 50px !important;
+  }
+}
+
 </style>

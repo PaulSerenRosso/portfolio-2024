@@ -7,7 +7,7 @@ export class ProjectInfo {
     timelineText,
     staffText,
     roleText,
-    pitchText,
+    pitchComponent,
     trailerSrc,
     keypoints,
     firstGradientColor,
@@ -21,7 +21,7 @@ export class ProjectInfo {
     this.overviewPictureSrc = overviewPictureSrc
     this.timelineText = timelineText
     this.staffText = staffText
-    this.pitchText = pitchText
+    this.pitchComponent =  pitchComponent
     this.trailerSrc = trailerSrc
     this.keypoints = keypoints
     this.firstGradientColor = firstGradientColor

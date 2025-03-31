@@ -26,25 +26,25 @@ paragraph-bold {
 
 @include mobile-md() {
   .paragraph-container {
-    font-size: $default-mobile-font-size;
+    font-size: $quote-mobile-font-size;
   }
 }
 
 @include tablet-md() {
   .paragraph-container {
-    font-size: $default-tablet-font-size;
+    font-size:  $quote-tablet-font-size;
   }
 }
 
 @include desktop-md() {
   .paragraph-container {
-    font-size: $default-desktop-font-size;
+    font-size:  $quote-desktop-font-size;
   }
 }
 
 @include largeDesktop-md() {
   .paragraph-container {
-    font-size: $default-large-desktop-font-size;
+    font-size: $quote-large-desktop-font-size;
   }
 }
 </style>

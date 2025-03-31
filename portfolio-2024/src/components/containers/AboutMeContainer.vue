@@ -24,7 +24,7 @@ export default defineComponent({
 
 <template>
   <div class="about-me-container">
-    <page-title class="about-me-title" text-content="What about me ?"></page-title>
+    <page-title class="about-me-title" text-content="What about me?"></page-title>
     <div class="about-me-grid">
       <prop-popup src="/manette.png" gradient-color="red">
         <template v-slot:title>Rebounds of failure</template>
@@ -72,7 +72,7 @@ export default defineComponent({
       </prop-popup>
     </div>
     <main-quote :is-right-direction="false" class="socket-quote"
-      >Finally, I have a collection of more 50 pair of sockets!
+      >Finally, I have a collection of more 50 pairs of sockets!
     </main-quote>
   </div>
 </template>
@@ -107,6 +107,9 @@ export default defineComponent({
   width: 100%;
   text-align: left;
   padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
 }
 
 @include mobile-md() {

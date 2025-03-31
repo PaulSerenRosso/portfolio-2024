@@ -22,7 +22,7 @@ export default {
 <template>
   <project-summary-container
     :one-line-text="this.projectsInfoStore.allProjectsInfo[this.projectKey].oneLineText"
-    :pitch-text="this.projectsInfoStore.allProjectsInfo[this.projectKey].pitchText"
+    :pitch-text="this.projectsInfoStore.allProjectsInfo[this.projectKey].pitchComponent"
     :project-name="this.projectsInfoStore.allProjectsInfo[this.projectKey].projectName"
     :role-text="this.projectsInfoStore.allProjectsInfo[this.projectKey].roleText"
     :staff-text="this.projectsInfoStore.allProjectsInfo[this.projectKey].staffText"
@@ -35,7 +35,9 @@ export default {
     :second-gradient-color="
       this.projectsInfoStore.allProjectsInfo[this.projectKey].secondGradientColor
     "
-  ></project-summary-container>
+  >
+    <slot name="pitch"></slot>
+  </project-summary-container>
   <project-keypoints-container
     :first-gradient-color="
       this.projectsInfoStore.allProjectsInfo[this.projectKey].firstGradientColor
@@ -44,7 +46,9 @@ export default {
       this.projectsInfoStore.allProjectsInfo[this.projectKey].secondGradientColor
     "
     :keypoints="this.projectsInfoStore.allProjectsInfo[this.projectKey].keypoints"
-  />
+  >
+
+  </project-keypoints-container>
   <end-redirector
     :link="this.projectsInfoStore.allProjectsInfo[this.nextProjectKey].link"
     :text-content="

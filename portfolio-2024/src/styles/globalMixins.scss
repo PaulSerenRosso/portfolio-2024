@@ -8,25 +8,25 @@
 
 // media queries
 @mixin mobile-md {
-  @media (max-width: #{$tablet-min-breakpoint - 1+"px"}) {
+  @media (max-width: #{$tablet-min-breakpoint - 1}px) {
     @content;
   }
 }
 
 @mixin tablet-md {
-  @media (min-width: #{$tablet-min-breakpoint+"px"}) {
+  @media (min-width: #{$tablet-min-breakpoint}px) and (max-width: #{$desktop-min-breakpoint - 1}px) {
     @content;
   }
 }
 
 @mixin desktop-md {
-  @media (min-width: #{$desktop-min-breakpoint+"px"}) {
+  @media (min-width: #{$desktop-min-breakpoint}px) and (max-width: #{$large-desktop-min-breakpoint - 1}px) {
     @content;
   }
 }
 
 @mixin largeDesktop-md {
-  @media (min-width: #{$large-desktop-min-breakpoint+"px"}) {
+  @media (min-width: #{$large-desktop-min-breakpoint}px) {
     @content;
   }
 }

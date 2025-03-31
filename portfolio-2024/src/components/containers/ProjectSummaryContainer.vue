@@ -6,7 +6,7 @@ import TagsContainer from '@/components/TagsContainer.vue'
 import MainParagraph from '@/components/MainParagraph.vue'
 import RadialGradient from '@/components/RadialGradient.vue'
 import PropPopup from "@/components/PropPopup.vue";
-
+import logo from '@/assets/manette.png';
 export default {
   name: 'ProjectSummaryContainer',
   components: {PropPopup, RadialGradient, MainParagraph, TagsContainer, MainVideo, MainQuote, PageTitle },
@@ -21,6 +21,11 @@ export default {
     trailerSrc: String,
     tagsText: Array,
     roleText: String,
+  },
+  data(){
+    return{
+      logo:logo,
+    }
   },
   mounted() {},
 }
@@ -58,22 +63,23 @@ export default {
           >{{this.timelineText}}
           </template>
         </prop-popup>
-        <prop-popup src="/manette.png">
-          <template v-slot:title>How many people?</template>
+        <prop-popup :src="logo">
+          <template v-slot:title>What is the team ?</template>
           <template v-slot:paragraph
           >{{this.staffText}}
           </template>
         </prop-popup>
         <prop-popup src="/rocket.png">>
-          <template v-slot:title>What was my role?</template>
+          <template v-slot:title>What is my role?</template>
           <template v-slot:paragraph
           >{{this.roleText}}
           </template>
         </prop-popup>
       </div>
-      <main-paragraph class="pitch">{{ this.pitchText }}</main-paragraph>
+      <component class="pitch" :is="this.pitchText"></component>
+
       <div class="trailer">
-      <main-video :src="this.trailerSrc" :delay="500"></main-video>
+      <main-video class="trailer-video" :src="this.trailerSrc" :delay="500"></main-video>
         </div>
     </div>
   </div>
@@ -84,28 +90,26 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
+
   padding-top: 30px;
   padding-bottom: 30px;
 }
 .pitch{
   width: 100%;
-  text-align: center;
+  text-align: center
+ ;
+
   padding-left:20px;
   padding-right: 20px;
 
 }
 .project-summary-grid{
-  display: grid;
-
+    display: grid;
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
-
     position: relative;
-  padding-bottom: 30px;
-
+    padding-bottom: 30px;
 
 }
 .project-summary-header {
@@ -134,6 +138,9 @@ export default {
     grid-auto-columns: auto;
     grid-row-gap: 30px;
   }
+  .trailer-video {
+    width: 90%;
+  }
 }
 
 @include tablet-md() {
@@ -143,6 +150,9 @@ export default {
     grid-row-gap: 30px;
     grid-column-gap: 30px;
   }
+  .trailer-video {
+    width: 90%;
+  }
 }
 
 @include desktop-md() {
@@ -151,6 +161,10 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 30px;
+  }
+  .trailer-video {
+    width: 120vh;
+    max-width: 90%;
   }
   .pitch{
     padding-left:20%;
@@ -164,6 +178,10 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-template-rows: auto;
+  }
+  .trailer-video {
+    width: 120vh;
+    max-width: 90%;
   }
   .pitch{
     padding-left:20%;

@@ -7,6 +7,7 @@ export default defineComponent({
     return {
       app: null,
       timer: null,
+
     }
   },
   props: {

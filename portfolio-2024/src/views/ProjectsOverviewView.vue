@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <page-title class="key-projects-title" text-content="Watch out my projects !"></page-title>
+  <page-title class="key-projects-title" text-content="Watch out my projects!"></page-title>
   <div class="key-projects-container">
     <div v-for="(projectInfo, index) in this.projectsInfoStore.allProjectsInfo" :key="index">
       <project-overview
@@ -58,13 +58,8 @@ export default defineComponent({
 @include mobile-md() {
   .key-projects-container {
     grid-template-rows: repeat(3, 1fr);
-    grid-auto-columns: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-
   }
 }
-
 @include tablet-md() {
   .key-projects-container {
     grid-template-rows: repeat(2, 2fr);
@@ -85,6 +80,9 @@ export default defineComponent({
     padding-right: 100px;
   }
 }
+
+
+
 
 @include largeDesktop-md() {
   .key-projects-container {

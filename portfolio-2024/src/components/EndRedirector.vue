@@ -19,10 +19,10 @@ export default {
     <span class="end-redirector-panel">
       <slide-in-animation :is-right-direction="false" :delay="0" key-event="endRedirectorReveal">
         <div class="end-redirector-panel-content">
-          <main-quote>{{ this.textContent }}</main-quote>
+          <main-quote class="description">{{ this.textContent }}</main-quote>
           <router-link class="text-content" :to="this.link">
             <main-button key-event="endRedirectorReveal" :delay="1000">
-              Show it !</main-button
+              Show it!</main-button
             ></router-link
           >
         </div>
@@ -31,6 +31,7 @@ export default {
   </div>
 </template>
 <style>
+
 .text-content {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -41,6 +42,8 @@ export default {
 </style>
 
 <style scoped lang="scss">
+
+
 .end-redirector-container {
   position: relative;
   width: 100%;
@@ -70,7 +73,7 @@ export default {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   text-decoration: none;
-  font-size: 11px;
+
 }
 
 .end-redirector-panel-content {
@@ -79,5 +82,25 @@ export default {
   font-size: 1rem;
   align-items: center;
   justify-content: space-around;
+}
+
+@include mobile-md() {
+  .description{
+    text-align: center;
+  }
+
+  .text-content {
+    padding-left: 0px;
+    padding-top: 10px;
+
+
+  }
+
+  .end-redirector-panel-content {
+    justify-content: center;
+    flex-direction: column;
+
+
+  }
 }
 </style>

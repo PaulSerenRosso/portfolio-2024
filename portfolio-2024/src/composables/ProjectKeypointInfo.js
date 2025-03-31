@@ -1,9 +1,11 @@
 export class ProjectKeypointInfo {
-  constructor(keypointName, keypointDescription, keypointContentSrc, contentIsVideo) {
+  constructor(keypointName, keypointDescriptionComponent, keypointTags, keypointContentSrc, contentIsVideo) {
     this.keypointName = keypointName
-    this.keypointDescription = keypointDescription
+    this.keypointDescriptionComponent = keypointDescriptionComponent
+    this.keypointTags = keypointTags;
     this.contentIsVideo = contentIsVideo;
     this.keypointContentSrc =keypointContentSrc;
+
 
   }
 }
