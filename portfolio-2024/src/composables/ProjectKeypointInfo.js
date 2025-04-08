@@ -1,9 +1,9 @@
 export class ProjectKeypointInfo {
-  constructor(keypointName, keypointDescriptionComponent, keypointTags, keypointContentSrc, contentIsVideo) {
+  constructor(keypointName, keypointDescriptionComponent, keypointTags, keypointContentSrc, contentType) {
     this.keypointName = keypointName
     this.keypointDescriptionComponent = keypointDescriptionComponent
     this.keypointTags = keypointTags;
-    this.contentIsVideo = contentIsVideo;
+    this.keypointContentType = contentType;
     this.keypointContentSrc =keypointContentSrc;
 
 

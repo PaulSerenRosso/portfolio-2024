@@ -44,3 +44,9 @@ export const allKeypointsTags ={
 
 
 }
+
+export const keypointContentType={
+  video:1,
+  image:2,
+  swiper:3,
+}

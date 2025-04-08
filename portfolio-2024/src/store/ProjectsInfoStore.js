@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ProjectInfo } from '@/composables/ProjectInfo.js'
 import { ProjectKeypointInfo } from '@/composables/ProjectKeypointInfo.js'
-import { allProjectsTags } from '@/composables/Enums.js'
+import {allProjectsTags, keypointContentType} from '@/composables/Enums.js'
 import { allKeypointsTags } from '@/composables/Enums.js'
 import logo from '@/assets/manette.png'
 import jabOverviewPicture from '@/assets/ProjectsOverview/JabOverviewPicture.jpg'
@@ -61,7 +61,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.patches,
             ],
             dofusKeypointContentWorkflow,
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Improve User Interfaces',
@@ -71,7 +71,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.optimization,
             ],
             'rocket.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Work on tactical combat system',
@@ -82,7 +82,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.ui,
             ],
             'test.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Program on others systems',
@@ -93,7 +93,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.sound,
             ],
             'ProjectsOverview.mp4',
-            true,
+            keypointContentType.video,
           ),
         ],
         'green',
@@ -126,8 +126,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'ProjectsOverview.mp4',
-            true,
+            [inrsKeypointContentSteam, jabKeypointContentOptimization, esquirelKeypointContentTools, dofusKeypointContentWorkflow],
+            keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -138,8 +138,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'rocket.png',
-            false,
+            [bobyKeypointContentWorkflow, dofusKeypointContentWorkflow],
+            keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -151,19 +151,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'test.png',
-            false,
-          ),
-          new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
-            [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
-            ],
-            'ProjectsOverview.mp4',
-            true,
+            keypointContentType.image,
           ),
         ],
         'darkenBlue',
@@ -196,7 +184,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'ProjectsOverview.mp4',
-            true,
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -208,7 +196,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'rocket.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -220,7 +208,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'test.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -232,7 +220,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             inrsKeypointContentSteam,
-            false,
+            keypointContentType.image,
           ),
         ],
         'violet',
@@ -264,7 +252,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.pipeline,
             ],
             bobyKeypointContentWorkflow,
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Design modular codebase',
@@ -274,7 +262,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
 
             ],
             'ProjectsOverview.mp4',
-            true,
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Improve accessibility',
@@ -285,7 +273,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.physics,
             ],
             'rocket.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Integrate the game in the software',
@@ -296,7 +284,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.QA,
             ],
             'test.png',
-            false,
+            keypointContentType.image,
           ),
 
         ],
@@ -325,7 +313,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'ProjectsOverview.mp4',
-            true,
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -337,7 +325,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             logo,
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -349,7 +337,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'test.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -361,7 +349,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             esquirelKeypointContentTools,
-            false,
+            keypointContentType.image,
           ),
         ],
         'orange',
@@ -394,7 +382,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'ProjectsOverview.mp4',
-            true,
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -406,7 +394,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             logo,
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -418,7 +406,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             'test.png',
-            false,
+            keypointContentType.image,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -430,7 +418,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.architecture,
             ],
             jabKeypointContentOptimization,
-            false,
+            keypointContentType.image,
           ),
         ],
         'red',

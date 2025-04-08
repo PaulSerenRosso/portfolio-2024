@@ -7,10 +7,20 @@ import PopupContainer from "@/components/PopupContainer.vue";
 import Subtitle from "@/components/Subtitle.vue";
 import MainParagraph from "@/components/MainParagraph.vue";
 import TagsContainer from "@/components/TagsContainer.vue";
+import {keypointContentType} from "@/composables/Enums.js";
+import MainSwiper from "@/components/MainSwiper.vue";
+import ContentImage from "@/components/ContentImage.vue";
 
 export default {
   name: "KeypointDetails",
-  components: {TagsContainer, MainParagraph, Subtitle, PopupContainer, MainImage, MainVideo, PropPopup},
+  computed: {
+    keypointContentType() {
+      return keypointContentType
+    }
+  },
+  components: {
+    ContentImage,
+    MainSwiper, TagsContainer, MainParagraph, Subtitle, PopupContainer, MainImage, MainVideo, PropPopup},
   props:{
     keypoint:null,
     colorGradient:String,
@@ -31,9 +41,10 @@ export default {
 
     </popup-container>
     <div class="content">
-      <main-video v-if="keypoint.contentIsVideo" :src="this.keypoint.keypointContentSrc"></main-video>
+      <main-video v-if="keypoint.keypointContentType === keypointContentType.video" :src="this.keypoint.keypointContentSrc"></main-video>
 
-      <main-image v-else class="keypoint-image" :src="this.keypoint.keypointContentSrc"></main-image>
+      <content-image v-else-if="keypoint.keypointContentType === keypointContentType.image"  :src="this.keypoint.keypointContentSrc"></content-image>
+ <main-swiper :image-srcs="this.keypoint.keypointContentSrc" v-else></main-swiper>
     </div>
 
   </div>
@@ -73,23 +84,11 @@ flex-wrap: wrap;
 
 }
 
-.keypoint-image{
 
-  border-color:$main-light-highlight-color;
-  border-width: 10px;
-  border-style: solid;
-  border-radius: 10px;
-}
 
 @include mobile-md() {
 
-  .keypoint-image{
 
-    border-color:$main-light-highlight-color;
-    border-width: 0;
-    border-style: solid;
-    border-radius: 0;
-  }
 
   .keypoint-details-container{
 
