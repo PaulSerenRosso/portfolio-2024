@@ -1,9 +1,10 @@
 <script>
 import ScrollingTrigger from '@/components/ScrollingTrigger.vue'
+import MainButton from "@/components/MainButton.vue";
 
 export default {
   name: 'MainImage',
-  components: { ScrollingTrigger },
+  components: {MainButton, ScrollingTrigger },
   props: {
     src: String,
     delay: Number,
@@ -19,6 +20,7 @@ export default {
 
 <template>
   <div ref="root" class="root">
+
     <scrolling-trigger style="position: absolute; top: 50%;"
       :delay="this.delay"
       @trigger-on-scrolling="launchRevealAnimation"

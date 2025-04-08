@@ -136,7 +136,7 @@ export default {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: auto;
     grid-auto-columns: auto;
-    grid-row-gap: 30px;
+    grid-row-gap: 0px;
   }
   .trailer-video {
     width: 90%;
@@ -145,10 +145,10 @@ export default {
 
 @include tablet-md() {
   .project-summary-grid {
-    grid-template-rows: repeat(2, 2fr);
-    grid-template-columns: repeat(2, 2fr);
-    grid-row-gap: 30px;
-    grid-column-gap: 30px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+    grid-auto-columns: auto;
+
   }
   .trailer-video {
     width: 90%;

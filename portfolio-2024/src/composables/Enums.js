@@ -24,5 +24,23 @@ export const allKeypointsTags ={
   architecture:"Architecture",
   ai:"Ai",
   tools:"Tools",
-  lead:"Lead Programmer"
+  lead:"Lead Programmer",
+  versionControl:"Version Control",
+  pipeline: "Pipeline",
+  patches: "Patches",
+  ui : "User Interfaces",
+  optimization:"Optimization",
+  network : "Network",
+  combat : "Combat",
+  sound : "Sounds",
+  controller:"3C",
+  gameFeel: "Game feels",
+  artIntegration : "Art Integration",
+  physics :"Physics",
+  php:"Php",
+  mobile:"Mobile",
+  QA:"QA"
+
+
+
 }

@@ -28,25 +28,25 @@ export default {
 
 @include mobile-md() {
   .tag {
-    font-size: $default-mobile-font-size;
+    font-size: $small-mobile-font-size;
   }
 }
 
 @include tablet-md() {
   .tag{
-    font-size: $default-tablet-font-size;
+    font-size: $small-tablet-font-size;
   }
 }
 
 @include desktop-md() {
   .tag {
-    font-size: $default-desktop-font-size;
+    font-size: $small-desktop-font-size;
   }
 }
 
 @include largeDesktop-md() {
   .tag {
-    font-size: $default-large-desktop-font-size;
+    font-size: $small-large-desktop-font-size;
   }
 }
 </style>

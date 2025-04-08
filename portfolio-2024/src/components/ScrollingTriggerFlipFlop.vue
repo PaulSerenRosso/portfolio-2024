@@ -28,7 +28,7 @@ export default defineComponent({
   methods: {
     checkNeedToTrigger() {
       if (this.isFlop) {
-        console.log("flip")
+
         if (this.$refs.revealAnimationTrigger.getBoundingClientRect().top >0 ) {
           clearTimeout(this.timer)
           this.timer = setTimeout(this.launchFlipAnimation, this.delay)
@@ -36,8 +36,10 @@ export default defineComponent({
 
         }
       } else {
-        console.log(this.$refs.revealAnimationTrigger.getBoundingClientRect().top)
-        if (this.$refs.revealAnimationTrigger.getBoundingClientRect().top <= 0) {
+
+        const top = this.$refs.revealAnimationTrigger.getBoundingClientRect().top;
+
+        if (top <= 0 || top-window.innerHeight>0) {
           clearTimeout(this.timer)
 
           this.timer = setTimeout(this.launchFlopAnimation, this.delay)

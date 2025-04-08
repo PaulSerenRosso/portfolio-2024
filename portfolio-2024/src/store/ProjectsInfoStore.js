@@ -7,22 +7,36 @@ import logo from '@/assets/manette.png'
 import jabOverviewPicture from '@/assets/ProjectsOverview/JabOverviewPicture.jpg'
 import dofusOverviewPicture from '@/assets/ProjectsOverview/DofusOverviewPicture.jpg'
 import esquirelOverviewPicture from '@/assets/ProjectsOverview/EsquirelOverviewPicture.jpg'
-import InrsOverviewPicture from '@/assets/ProjectsOverview/INRSOverviewPicture.jpg'
+import inrsOverviewPicture from '@/assets/ProjectsOverview/INRSOverviewPicture.jpg'
 import bobyOverviewPicture from '@/assets/ProjectsOverview/BobyOverviewPicture.jpg'
+import rsmOverviewPicture from '@/assets/ProjectsOverview/RSMOverviewPicture.jpg'
 import inrsPitch from '@/components/projects/inrs/InrsPitch.vue'
-import esquirelFogKeypointDescription from '@/components/projects/esquirel/EsquirelFogKeypointDescription.vue'
+
 import dofusPitch from '@/components/projects/dofus/DofusPitch.vue'
 import rsmPitch from '@/components/projects/rsm/RsmPitch.vue'
 import bobyPitch from '@/components/projects/boby/BobyPitch.vue'
 import esquirelPitch from '@/components/projects/esquirel/EsquirelPitch.vue'
 import jabPitch from '@/components/projects/jab/JabPitch.vue'
-import EsquirelFogKeypointDescription from "@/components/projects/esquirel/EsquirelFogKeypointDescription.vue";
-
+import esquirelFogKeypointDescription from "@/components/projects/esquirel/EsquirelFogKeypointDescription.vue";
+import dofusKeypointDescriptionImproveUI from "@/components/projects/dofus/DofusKeypointDescriptionImproveUI.vue";
+import dofusKeypointDescriptionWorkflow from "@/components/projects/dofus/DofusKeypointDescriptionWorkflow.vue";
+import dofusKeypointDescriptionTacticalCombat
+  from "@/components/projects/dofus/DofusKeypointDescriptionTacticalCombat.vue";
+import dofusKeypointDescriptionOthersTasks from "@/components/projects/dofus/DofusKeypointDescriptionOthersTasks.vue";
+import bobyKeypointDescriptionModularity from "@/components/projects/boby/BobyKeypointDescriptionModularity.vue";
+import bobyKeypointDescriptionAccessibility from "@/components/projects/boby/BobyKeypointDescriptionAccessibility.vue";
+import bobyKeypointDescriptionIntegration from "@/components/projects/boby/BobyKeypointDescriptionIntegration.vue";
+import bobyKeypointDescriptionWorkflow from "@/components/projects/boby/BobyKeypointDescriptionWorkflow.vue";
+import esquirelKeypointContentTools from "@/assets/ProjectsKeypoints/EsquirelKeypointTools.jpg"
+import bobyKeypointContentWorkflow from "@/assets/ProjectsKeypoints/BobyKeypointWorkflow.jpg"
+import dofusKeypointContentWorkflow from "@/assets/ProjectsKeypoints/DofusKeypointWorkflow.jpg"
+import jabKeypointContentOptimization from "@/assets/ProjectsKeypoints/JabKeypointOptimization.jpg"
+import inrsKeypointContentSteam from "@/assets/ProjectsKeypoints/InrsKeypointSteam.jpg"
 export const useProjectInfoStore = defineStore('projectsInfoStore', {
   state: () => ({
     allProjectsInfo: {
       dofusBetaProject: new ProjectInfo(
-        'Dofus Unity Beta',
+        'Dofus 3.0 Open Beta',
         '20-year-old fantasy MMORPG with turn-based combat',
         [
           allProjectsTags.ankama,
@@ -32,55 +46,51 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.patchs,
         ],
         dofusOverviewPicture,
-        'July 2024 until October 2024 (3 months)','Team ≈50 members, including ≈20 of Game Programmers spread across Client and Server departments, as well as Game Designers, Level Designers, UX/UI Designers, QA specialists, Project Managers, and Game Artists.',
+        'July 2024 until October 2024 (3 months)','Team ≈70 members, including ≈20 of Game Programmers spread across Client and Server departments, as well as Game Designers, Level Designers, UX/UI Designers, QA specialists, Project Managers, and Game Artists.',
         'Client Game Programmer',
         dofusPitch,
-        'ProjectsOverview.mp4',
+        'dIsIL1yv6iA',
         [
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Follow the Dofus Workflow',
+            dofusKeypointDescriptionWorkflow,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
               allKeypointsTags.architecture,
+              allKeypointsTags.versionControl,
+              allKeypointsTags.pipeline,
+              allKeypointsTags.patches,
             ],
-            'ProjectsOverview.mp4',
-            true,
+            dofusKeypointContentWorkflow,
+            false,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Improve User Interfaces',
+            dofusKeypointDescriptionImproveUI,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.ui,
+              allKeypointsTags.optimization,
             ],
             'rocket.png',
             false,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Work on tactical combat system',
+            dofusKeypointDescriptionTacticalCombat,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.combat,
+              allKeypointsTags.network,
+              allKeypointsTags.ui,
             ],
             'test.png',
             false,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Program on others systems',
+            dofusKeypointDescriptionOthersTasks,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.controller,
+              allKeypointsTags.ui,
+              allKeypointsTags.sound,
             ],
             'ProjectsOverview.mp4',
             true,
@@ -91,7 +101,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         '/dofusbeta',
       ),
       rsmProject: new ProjectInfo(
-        'RSM',
+        '[WIP] RSM',
         'Semi-cooperative social horror game at 4 players',
         [
           allProjectsTags.studentProject,
@@ -100,12 +110,12 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.cPlusPlus,
           allProjectsTags.blueprints,
         ],
-        'test.png',
+        rsmOverviewPicture,
         'March 2024 until June 2024 / October 2024 until June 2025 (10 months)',
         '2 Game Programmers, 2 Game Designers, 4 Game Artists',
         'Producer, Gameplay Programmer',
         rsmPitch,
-        'ProjectsOverview.mp4',
+        'T7cDLjUOEEQ',
         [
           new ProjectKeypointInfo(
             'Test',
@@ -169,12 +179,12 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.blueprints,
           allProjectsTags.steam,
         ],
-        InrsOverviewPicture,
+        inrsOverviewPicture,
         'October 2023 to January 2024 (4 months)',
         '4 Game Designers, 2 Game Programmers',
         'Gameplay Programmer',
         inrsPitch,
-        'ProjectsOverview.mp4',
+        'V7y_USOCUTQ',
         [
           new ProjectKeypointInfo(
             'Programmer une simulation de elastique',
@@ -221,8 +231,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'ProjectsOverview.mp4',
-            true,
+            inrsKeypointContentSteam,
+            false,
           ),
         ],
         'violet',
@@ -245,56 +255,50 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         'Team ≈15 members, including UI/UX Designers, Web Developers, Product Owners, Marketing/Communication Managers',
         'Game designer, Gameplay Programmer',
         bobyPitch,
-        'ProjectsOverview.mp4',
+        '3KgCCcElbdg',
         [
           new ProjectKeypointInfo(
-            'Test',
-            EsquirelFogKeypointDescription,
+            'Follow Scrum & Agile methods',
+            bobyKeypointDescriptionWorkflow,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
+              allKeypointsTags.pipeline,
+            ],
+            bobyKeypointContentWorkflow,
+            false,
+          ),
+          new ProjectKeypointInfo(
+            'Design modular codebase',
+            bobyKeypointDescriptionModularity,
+            [
               allKeypointsTags.architecture,
+
             ],
             'ProjectsOverview.mp4',
             true,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            EsquirelFogKeypointDescription,
+            'Improve accessibility',
+            bobyKeypointDescriptionAccessibility,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.gameFeel,
+              allKeypointsTags.artIntegration,
+              allKeypointsTags.physics,
             ],
             'rocket.png',
             false,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            EsquirelFogKeypointDescription,
+            'Integrate the game in the software',
+           bobyKeypointDescriptionIntegration,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.php,
+              allKeypointsTags.mobile,
+              allKeypointsTags.QA,
             ],
             'test.png',
             false,
           ),
-          new ProjectKeypointInfo(
-            'Test',
-            EsquirelFogKeypointDescription,
-            [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
-            ],
-            'ProjectsOverview.mp4',
-            true,
-          ),
+
         ],
         'yellow',
         'yellow',
@@ -309,7 +313,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         '10 Game Programmers (pre-production) / 4 Game Designers, 2 Game Programmers, 4 Game Artists (production)',
         'Architecture programmer (pre-production) / Lead Gameplay Programmer (production)',
         esquirelPitch,
-        'ProjectsOverview.mp4',
+        'iLXKFulKzw8',
         [
           new ProjectKeypointInfo(
             'Test',
@@ -356,8 +360,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'ProjectsOverview.mp4',
-            true,
+            esquirelKeypointContentTools,
+            false,
           ),
         ],
         'orange',
@@ -376,9 +380,9 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         jabOverviewPicture,
         'February 2023 until June 2023 (4 months)',
         '2 Game Programmers / 4 Game Designers, 6 Game Artists',
-        'Lead Game Programmer',
+        'Lead Game Programmer / Tool Programmer',
         jabPitch,
-        'ProjectsOverview.mp4',
+        'R5A5sDkaRSw',
         [
           new ProjectKeypointInfo(
             'Test',
@@ -425,8 +429,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'ProjectsOverview.mp4',
-            true,
+            jabKeypointContentOptimization,
+            false,
           ),
         ],
         'red',

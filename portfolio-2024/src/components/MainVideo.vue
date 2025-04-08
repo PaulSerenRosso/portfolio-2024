@@ -13,10 +13,16 @@ export default {
       type: Number,
     },
   },
+  data(){
+    return{
+     isLoaded:false,
+    }
+  },
   mounted() {
-    this.pauseVideo()
+
     this.$refs.video.onload = () => {
-      this.pauseVideo()
+
+      this.isLoaded = true;
     }
   },
   methods: {
@@ -40,7 +46,7 @@ export default {
 <template>
   <tv-border :delay="this.delay">
     <template v-slot:scrollingTrigger>
-      <scrolling-trigger-flip-flop
+      <scrolling-trigger-flip-flop v-if="isLoaded"
         :delay="1000"
         @triggerOnFlipScrolling="this.playVideo"
         @triggerOnFlopScrolling="this.pauseVideo"

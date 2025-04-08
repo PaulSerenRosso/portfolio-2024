@@ -32,6 +32,7 @@ export default {
     </popup-container>
     <div class="content">
       <main-video v-if="keypoint.contentIsVideo" :src="this.keypoint.keypointContentSrc"></main-video>
+
       <main-image v-else class="keypoint-image" :src="this.keypoint.keypointContentSrc"></main-image>
     </div>
 
@@ -73,10 +74,22 @@ flex-wrap: wrap;
 }
 
 .keypoint-image{
+
+  border-color:$main-light-highlight-color;
+  border-width: 10px;
+  border-style: solid;
   border-radius: 10px;
 }
 
 @include mobile-md() {
+
+  .keypoint-image{
+
+    border-color:$main-light-highlight-color;
+    border-width: 0;
+    border-style: solid;
+    border-radius: 0;
+  }
 
   .keypoint-details-container{
 
@@ -89,6 +102,11 @@ flex-wrap: wrap;
   }
   .content{
     width: 100%;
+  }
+  .paragraph{
+    border-left-width: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
   }
 }
 
