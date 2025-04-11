@@ -1,3 +1,5 @@
+import {markRaw} from "vue";
+
 export class ProjectInfo {
   constructor(
     projectName,
@@ -21,7 +23,7 @@ export class ProjectInfo {
     this.overviewPictureSrc = overviewPictureSrc
     this.timelineText = timelineText
     this.staffText = staffText
-    this.pitchComponent =  pitchComponent
+    this.pitchComponent =  markRaw(pitchComponent);
     this.trailerSrc = trailerSrc
     this.keypoints = keypoints
     this.firstGradientColor = firstGradientColor

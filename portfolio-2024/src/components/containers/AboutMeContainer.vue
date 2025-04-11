@@ -1,7 +1,6 @@
 <script>
 import { defineComponent } from 'vue'
 import PageTitle from '@/components/PageTitle.vue'
-import PropRender from '@/components/PropRender.vue'
 import Subtitle from '@/components/Subtitle.vue'
 import MainParagraph from '@/components/MainParagraph.vue'
 import PropPopup from '@/components/PropPopup.vue'
@@ -16,7 +15,6 @@ export default defineComponent({
     PropPopup,
     MainParagraph,
     Subtitle,
-    PropRender,
     PageTitle,
   },
 })

@@ -8,10 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "generate-images": "node scripts/generate-images.js",
+    "write-import-images": "node scripts/write-import-images.js",
+    "clear-generated-folder": "node scripts/clear-generated-folder.js"
   },
   "dependencies": {
     "pinia": "^2.2.8",
+    "sharp": "^0.34.1",
     "swiper": "^11.2.6",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"

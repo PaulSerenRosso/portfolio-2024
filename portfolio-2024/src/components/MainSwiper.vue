@@ -22,14 +22,14 @@ export default defineComponent({
     navigation="true"
     pagination="true"
     loop="true"
-    autoplay-delay="2500" autoplay-disable-on-interaction="true"
+    autoplay-delay="3500" autoplay-disable-on-interaction="true"
     grabCursor="true"
     space-between="30"
     class="mySwiper"
   >
 
     <swiper-slide v-for="(image,index) in this.imageSrcs" :key="index">
-      <content-image :src="image"></content-image>
+      <content-image  :has-animation="false"  :src="image"></content-image>
     </swiper-slide>
   </swiper-container>
 </template>

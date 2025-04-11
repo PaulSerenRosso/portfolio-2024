@@ -20,7 +20,7 @@ export default defineComponent({
   </space-paragraph>
 
   <space-paragraph>
-    <link-element link="https://www.dofus.com/en/mmorpg/discover">Dofus</link-element> is an MMORPG
+    <link-element link="https://www.dofus.com/en/mmorpg/discover">Dofus</link-element> is an <bold-element>MMORPG</bold-element>
     release in 2004. Set in the “World of Twelve”, Dofus offers players the chance to create and
     customize their character from 18 classes,  <bold-element>explore</bold-element> a vast world filled with quests and dungeons,
     and engage in <bold-element>turn-based combat</bold-element> against monsters or other players in PvP. They can also learn

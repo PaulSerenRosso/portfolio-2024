@@ -15,15 +15,16 @@ export default defineComponent({
 
 <template>
   <div class="welcome-container">
-    <radial-gradient top="10" left="10" :radius="20" color="blue"></radial-gradient>
-    <radial-gradient top="90" left="90" :radius="25" color="yellow"></radial-gradient>
-    <radial-gradient top="100" left="0" :radius="20" color="red"></radial-gradient>
-    <radial-gradient top="0" left="100" :radius="25" color="green"></radial-gradient>
+    <radial-gradient :top="0" :left="10" :radius-x="50" :radius-y="50" color="blue"></radial-gradient>
+
+    <radial-gradient :top="90" :left="90" :radius-x="50" :radius-y="50" color="yellow"></radial-gradient>
+    <radial-gradient :top="100" :left="0" :radius-x="50" :radius-y="50" color="red"></radial-gradient>
+    <radial-gradient :top="0" :left="100" :radius-x="50" :radius-y="50" color="green"></radial-gradient>
     <page-title
       text-content="Welcome, I'm Paul, a Game Programmer!"
       class="welcome-title"
     ></page-title>
-    <main-quote class="welcome-quote" :delay="2000">
+    <main-quote class="welcome-quote" :delay="1000">
       M2 Student Game Programming at Rubika / Looking for a 6-month end-of-studies internship from
       July
     </main-quote>

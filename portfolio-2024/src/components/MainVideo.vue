@@ -46,7 +46,7 @@ export default {
 <template>
   <tv-border :delay="this.delay">
     <template v-slot:scrollingTrigger>
-      <scrolling-trigger-flip-flop v-if="isLoaded"
+      <scrolling-trigger-flip-flop style="position: absolute; top: 50%;" v-if="isLoaded"
         :delay="1000"
         @triggerOnFlipScrolling="this.playVideo"
         @triggerOnFlopScrolling="this.pauseVideo"

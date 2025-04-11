@@ -3,18 +3,12 @@ import { ProjectInfo } from '@/composables/ProjectInfo.js'
 import { ProjectKeypointInfo } from '@/composables/ProjectKeypointInfo.js'
 import {allProjectsTags, keypointContentType} from '@/composables/Enums.js'
 import { allKeypointsTags } from '@/composables/Enums.js'
-import logo from '@/assets/manette.png'
-import jabOverviewPicture from '@/assets/ProjectsOverview/JabOverviewPicture.jpg'
-import dofusOverviewPicture from '@/assets/ProjectsOverview/DofusOverviewPicture.jpg'
-import esquirelOverviewPicture from '@/assets/ProjectsOverview/EsquirelOverviewPicture.jpg'
-import inrsOverviewPicture from '@/assets/ProjectsOverview/INRSOverviewPicture.jpg'
-import bobyOverviewPicture from '@/assets/ProjectsOverview/BobyOverviewPicture.jpg'
-import rsmOverviewPicture from '@/assets/ProjectsOverview/RSMOverviewPicture.jpg'
-import inrsPitch from '@/components/projects/inrs/InrsPitch.vue'
 
+import inrsPitch from '@/components/projects/inrs/InrsPitch.vue'
 import dofusPitch from '@/components/projects/dofus/DofusPitch.vue'
 import rsmPitch from '@/components/projects/rsm/RsmPitch.vue'
 import bobyPitch from '@/components/projects/boby/BobyPitch.vue'
+
 import esquirelPitch from '@/components/projects/esquirel/EsquirelPitch.vue'
 import jabPitch from '@/components/projects/jab/JabPitch.vue'
 import esquirelFogKeypointDescription from "@/components/projects/esquirel/EsquirelFogKeypointDescription.vue";
@@ -27,11 +21,33 @@ import bobyKeypointDescriptionModularity from "@/components/projects/boby/BobyKe
 import bobyKeypointDescriptionAccessibility from "@/components/projects/boby/BobyKeypointDescriptionAccessibility.vue";
 import bobyKeypointDescriptionIntegration from "@/components/projects/boby/BobyKeypointDescriptionIntegration.vue";
 import bobyKeypointDescriptionWorkflow from "@/components/projects/boby/BobyKeypointDescriptionWorkflow.vue";
-import esquirelKeypointContentTools from "@/assets/ProjectsKeypoints/EsquirelKeypointTools.jpg"
-import bobyKeypointContentWorkflow from "@/assets/ProjectsKeypoints/BobyKeypointWorkflow.jpg"
-import dofusKeypointContentWorkflow from "@/assets/ProjectsKeypoints/DofusKeypointWorkflow.jpg"
-import jabKeypointContentOptimization from "@/assets/ProjectsKeypoints/JabKeypointOptimization.jpg"
-import inrsKeypointContentSteam from "@/assets/ProjectsKeypoints/InrsKeypointSteam.jpg"
+
+//TODO:import the generated files
+import {
+  bobyKeypointWorkflow,
+  dofusKeypointWorkflow, esquirelKeypointTools, inrsKeypointSteam, jabKeypointOptimization,
+  rsmKeypointContentConcept1,
+  rsmKeypointContentConcept2,
+  rsmKeypointContentConcept3,
+  rsmKeypointContentConcept4,
+  rsmKeypointContentConcept5,
+  rsmKeypointContentProducing1,
+  rsmKeypointContentProducing2,
+  rsmKeypointContentProducing3,
+  rsmKeypointContentProducing4,
+  rsmKeypointContentProducing5,
+  rsmKeypointContentPrototype1,
+  rsmKeypointContentPrototype2,
+  rsmKeypointContentPrototype3, rsmKeypointContentPrototype4, rsmKeypointContentPrototype5
+} from "@/utils/generated/projectKeypointImagesImports.js"
+import {
+  bobyOverviewPicture,
+  dofusOverviewPicture, esquirelOverviewPicture, iNRSOverviewPicture, jabOverviewPicture,
+  rSMOverviewPicture,
+} from "@/utils/generated/projectOverviewImagesImports.js"
+import {markRaw} from "vue";
+
+
 export const useProjectInfoStore = defineStore('projectsInfoStore', {
   state: () => ({
     allProjectsInfo: {
@@ -60,7 +76,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.pipeline,
               allKeypointsTags.patches,
             ],
-            dofusKeypointContentWorkflow,
+           dofusKeypointWorkflow,
             keypointContentType.image,
           ),
           new ProjectKeypointInfo(
@@ -110,7 +126,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.cPlusPlus,
           allProjectsTags.blueprints,
         ],
-        rsmOverviewPicture,
+        rSMOverviewPicture,
         'March 2024 until June 2024 / October 2024 until June 2025 (10 months)',
         '2 Game Programmers, 2 Game Designers, 4 Game Artists',
         'Producer, Gameplay Programmer',
@@ -126,7 +142,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            [inrsKeypointContentSteam, jabKeypointContentOptimization, esquirelKeypointContentTools, dofusKeypointContentWorkflow],
+            [rsmKeypointContentConcept1, rsmKeypointContentConcept2, rsmKeypointContentConcept3, rsmKeypointContentConcept4, rsmKeypointContentConcept5],
             keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
@@ -138,8 +154,21 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            [bobyKeypointContentWorkflow, dofusKeypointContentWorkflow],
+            [rsmKeypointContentProducing1, rsmKeypointContentProducing2, rsmKeypointContentProducing3, rsmKeypointContentProducing4, rsmKeypointContentProducing5],
             keypointContentType.swiper,
+          ),
+
+          new ProjectKeypointInfo(
+            'Test',
+            esquirelFogKeypointDescription,
+            [
+              allKeypointsTags.research,
+              allKeypointsTags.lead,
+              allKeypointsTags.producer,
+              allKeypointsTags.architecture,
+            ],
+            'fZ6ramtZYAE',
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -150,9 +179,10 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            'test.png',
-            keypointContentType.image,
+            [rsmKeypointContentPrototype1, rsmKeypointContentPrototype2,rsmKeypointContentPrototype3, rsmKeypointContentPrototype4, rsmKeypointContentPrototype5],
+            keypointContentType.swiper,
           ),
+
         ],
         'darkenBlue',
         'green',
@@ -167,7 +197,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.blueprints,
           allProjectsTags.steam,
         ],
-        inrsOverviewPicture,
+       iNRSOverviewPicture,
         'October 2023 to January 2024 (4 months)',
         '4 Game Designers, 2 Game Programmers',
         'Gameplay Programmer',
@@ -219,7 +249,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            inrsKeypointContentSteam,
+            inrsKeypointSteam,
             keypointContentType.image,
           ),
         ],
@@ -251,7 +281,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
             [
               allKeypointsTags.pipeline,
             ],
-            bobyKeypointContentWorkflow,
+           bobyKeypointWorkflow,
             keypointContentType.image,
           ),
           new ProjectKeypointInfo(
@@ -324,8 +354,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            logo,
-            keypointContentType.image,
+            "logo",
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -348,7 +378,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            esquirelKeypointContentTools,
+            esquirelKeypointTools,
             keypointContentType.image,
           ),
         ],
@@ -393,8 +423,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            logo,
-            keypointContentType.image,
+            "logo",
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Test',
@@ -417,7 +447,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.producer,
               allKeypointsTags.architecture,
             ],
-            jabKeypointContentOptimization,
+            jabKeypointOptimization,
             keypointContentType.image,
           ),
         ],

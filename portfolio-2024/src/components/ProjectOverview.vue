@@ -6,10 +6,28 @@ import MainParagraph from '@/components/MainParagraph.vue'
 
 import PopupContainer from '@/components/PopupContainer.vue'
 import TagsContainer from '@/components/TagsContainer.vue'
+import {
+  rsmKeypointContentConcept1,
+  rsmKeypointContentConcept2, rsmKeypointContentProducing1, rsmKeypointContentPrototype5
+} from "@/utils/generated/projectKeypointImagesImports.js";
 
 
 export default {
   name: 'ProjectOverview',
+  computed: {
+    rsmKeypointContentPrototype5() {
+      return rsmKeypointContentPrototype5
+    },
+    rsmKeypointContentProducing1() {
+      return rsmKeypointContentProducing1
+    },
+    rsmKeypointContentConcept2() {
+      return rsmKeypointContentConcept2
+    },
+    rsmKeypointContentConcept1() {
+      return rsmKeypointContentConcept1
+    }
+  },
   components: {
 
 
@@ -23,7 +41,7 @@ export default {
   props: {
     subtitle: String,
     oneLine: String,
-    PictureOverviewSrc: String,
+    PictureOverviewSrc: {},
     tags: Array,
     gradientColor: String,
     keypoints: Array,
@@ -35,8 +53,8 @@ export default {
 <template>
   <popup-container class="project-overview-root"
     class-container-name="project-overview-container"
-    :gradient-color="this.gradientColor"
-  >
+    :gradient-color="this.gradientColor">
+
     <router-link :to="this.link">
       <div style="overflow: hidden; border-radius: 50px;  aspect-ratio: 16/9;">
         <main-image class="overview-picture" :src="this.PictureOverviewSrc"></main-image>
@@ -60,6 +78,7 @@ export default {
 
   </popup-container>
 </template>
+
 <style lang="scss">
 .project-overview-root {
   padding-bottom: 0 !important;

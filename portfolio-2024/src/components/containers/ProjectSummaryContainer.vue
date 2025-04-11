@@ -6,7 +6,8 @@ import TagsContainer from '@/components/TagsContainer.vue'
 import MainParagraph from '@/components/MainParagraph.vue'
 import RadialGradient from '@/components/RadialGradient.vue'
 import PropPopup from "@/components/PropPopup.vue";
-import logo from '@/assets/manette.png';
+import {roleProp, teamProp} from "@/utils/generated/propsImagesImports.js";
+
 export default {
   name: 'ProjectSummaryContainer',
   components: {PropPopup, RadialGradient, MainParagraph, TagsContainer, MainVideo, MainQuote, PageTitle },
@@ -15,7 +16,7 @@ export default {
     firstGradientColor: String,
     secondGradientColor: String,
     oneLineText: String,
-    pitchText: String,
+    pitchText: {},
     staffText: String,
     timelineText: String,
     trailerSrc: String,
@@ -24,7 +25,9 @@ export default {
   },
   data(){
     return{
-      logo:logo,
+
+      teamProp:teamProp,
+      roleProp:roleProp,
     }
   },
   mounted() {},
@@ -51,25 +54,25 @@ export default {
       </radial-gradient>
       <tags-container class="tag-container" :tags="this.tagsText"></tags-container>
       <page-title  :text-content="this.projectName" > </page-title>
-      <main-quote :delay="2000" :is-right-direction="true">
+      <main-quote :delay="1000" :is-right-direction="true">
         {{ this.oneLineText }}
       </main-quote>
     </div>
     <div class="project-summary-content">
       <div class="project-summary-grid">
-        <prop-popup src="/fraise.png">
+        <prop-popup :src="teamProp">
           <template v-slot:title>When?</template>
           <template v-slot:paragraph
           >{{this.timelineText}}
           </template>
         </prop-popup>
-        <prop-popup :src="logo">
+        <prop-popup :src="teamProp">
           <template v-slot:title>What is the team ?</template>
           <template v-slot:paragraph
           >{{this.staffText}}
           </template>
         </prop-popup>
-        <prop-popup src="/rocket.png">>
+        <prop-popup :src="roleProp">>
           <template v-slot:title>What is my role?</template>
           <template v-slot:paragraph
           >{{this.roleText}}

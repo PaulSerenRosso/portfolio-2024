@@ -6,6 +6,7 @@ import PropPopup from "@/components/PropPopup.vue";
 import MainButton from "@/components/MainButton.vue";
 import LinkButton from "@/components/LinkButton.vue";
 import PageTitle from "@/components/PageTitle.vue";
+import {gmailProp, twitterProp} from "@/utils/generated/propsImagesImports.js";
 
 export default defineComponent({
   name: 'ContactView',
@@ -13,6 +14,8 @@ export default defineComponent({
   data(){
     return{
       clipBoardAnimationTimer:undefined,
+      twitterProp:twitterProp,
+      gmailProp:gmailProp,
     }
   },
   methods: {
@@ -50,7 +53,7 @@ export default defineComponent({
       <link-button link="https://www.linkedin.com/in/paul-seren-rosso/">Get it!</link-button>
       </template>
     </prop-popup>
-    <prop-popup src="/manette.png" gradient-color="red">
+    <prop-popup :src="gmailProp" gradient-color="red">
       <template v-slot:title> My Mail</template>
       <template v-slot:paragraph>
         <div>
@@ -70,7 +73,7 @@ export default defineComponent({
         <link-button link="https://github.com/PaulSerenRosso">Get it!</link-button>
       </template>
     </prop-popup>
-    <prop-popup src="/fraise.png" gradient-color="green">
+    <prop-popup :src="twitterProp" gradient-color="green">
       <template v-slot:title> My Twitter</template>
       <template v-slot:paragraph>
         <link-button link="https://twitter.com/tiondel_">Get it!</link-button>
