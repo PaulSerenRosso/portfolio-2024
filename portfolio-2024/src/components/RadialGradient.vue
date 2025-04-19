@@ -18,7 +18,7 @@ export default defineComponent({
         red: gradientRed,
         yellow: gradientYellow,
         darkenBlue: gradientDarkenBlue,
-        blue: gradientBlue,
+        blue:gradientBlue,
         green: gradientGreen,
         lightGreen: gradientLightGreen,
         violet: gradientViolet,
@@ -51,7 +51,7 @@ export default defineComponent({
     <picture>
 
       <source :srcset="this.Colors[this.color].webp">
-      <img :style="{top:this.top+'%', left:this.left+'%', width:this.radiusX*2+'%', height:this.radiusY*2+'%'}" :src="Colors[this.color].png" ref="container" class="background-radial-gradient" >
+      <img loading="lazy" :style="{top:this.top+'%', left:this.left+'%', width:this.radiusX*2+'%', height:this.radiusY*2+'%'}" :src="Colors[this.color].png" ref="container" class="background-radial-gradient" >
     </picture>
 
 
@@ -67,7 +67,9 @@ export default defineComponent({
   z-index: -1;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0.7;
+
+
+filter: blur(50px);
 
 }
 </style>

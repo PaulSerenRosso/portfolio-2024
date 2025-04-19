@@ -22,7 +22,7 @@ export const allKeypointsTags ={
   documentation:'Documentation',
   producer:"Producer",
   architecture:"Architecture",
-  ai:"Ai",
+  ai:"AI",
   tools:"Tools",
   lead:"Lead Programmer",
   versionControl:"Version Control",
@@ -39,7 +39,15 @@ export const allKeypointsTags ={
   physics :"Physics",
   php:"Php",
   mobile:"Mobile",
-  QA:"QA"
+  qA:"QA",
+  presentation:"Presentation",
+  communication:"Communication",
+  techArt:"Tech-Art",
+  procedural:"Procedural Content",
+  api:"API",
+  gameDesign:"Game Design"
+
+
 
 
 
@@ -49,4 +57,5 @@ export const keypointContentType={
   video:1,
   image:2,
   swiper:3,
+  images:4
 }

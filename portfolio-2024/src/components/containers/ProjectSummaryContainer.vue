@@ -6,7 +6,7 @@ import TagsContainer from '@/components/TagsContainer.vue'
 import MainParagraph from '@/components/MainParagraph.vue'
 import RadialGradient from '@/components/RadialGradient.vue'
 import PropPopup from "@/components/PropPopup.vue";
-import {roleProp, teamProp} from "@/utils/generated/propsImagesImports.js";
+import {roleProp, teamProp, timelineProp} from "@/utils/generated/propsImagesImports.js";
 
 export default {
   name: 'ProjectSummaryContainer',
@@ -28,6 +28,7 @@ export default {
 
       teamProp:teamProp,
       roleProp:roleProp,
+      timelineProp:timelineProp,
     }
   },
   mounted() {},
@@ -40,17 +41,19 @@ export default {
       <radial-gradient
         :top="0"
         :left="0"
-        :radius="50"
+        :radius-x="40"
+        :radius-y="40"
         :color="this.firstGradientColor"
       ></radial-gradient>
       <radial-gradient
         :top="100"
         :left="0"
-        :radius="50"
+        :radius-x="40"
+        :radius-y="40"
         :color="this.firstGradientColor"
       ></radial-gradient>
 
-      <radial-gradient :top="100" :left="100" :radius="50" :color="this.secondGradientColor">
+      <radial-gradient :top="100" :left="100" :radius-x="60" :radius-y="60" :color="this.secondGradientColor">
       </radial-gradient>
       <tags-container class="tag-container" :tags="this.tagsText"></tags-container>
       <page-title  :text-content="this.projectName" > </page-title>
@@ -60,19 +63,19 @@ export default {
     </div>
     <div class="project-summary-content">
       <div class="project-summary-grid">
-        <prop-popup :src="teamProp">
+        <prop-popup :src="timelineProp" >
           <template v-slot:title>When?</template>
           <template v-slot:paragraph
           >{{this.timelineText}}
           </template>
         </prop-popup>
-        <prop-popup :src="teamProp">
+        <prop-popup :src="teamProp" >
           <template v-slot:title>What is the team ?</template>
           <template v-slot:paragraph
           >{{this.staffText}}
           </template>
         </prop-popup>
-        <prop-popup :src="roleProp">>
+        <prop-popup :src="roleProp" >
           <template v-slot:title>What is my role?</template>
           <template v-slot:paragraph
           >{{this.roleText}}

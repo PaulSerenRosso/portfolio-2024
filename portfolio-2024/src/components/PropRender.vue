@@ -24,7 +24,7 @@ export default defineComponent({
   <div ref="propContainer" class="prop-container">
     <picture>
       <source :srcset="this.src.webp" type="image/webp" />
-      <img class="prop-render" :src="this.src.png" />
+      <img loading="lazy" class="prop-render" :src="this.src.png" />
     </picture>
   </div>
 </template>

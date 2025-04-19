@@ -11,7 +11,7 @@ import bobyPitch from '@/components/projects/boby/BobyPitch.vue'
 
 import esquirelPitch from '@/components/projects/esquirel/EsquirelPitch.vue'
 import jabPitch from '@/components/projects/jab/JabPitch.vue'
-import esquirelFogKeypointDescription from "@/components/projects/esquirel/EsquirelFogKeypointDescription.vue";
+import esquirelKeypointDescriptionFog from "@/components/projects/esquirel/EsquirelKeypointDescriptionFog.vue";
 import dofusKeypointDescriptionImproveUI from "@/components/projects/dofus/DofusKeypointDescriptionImproveUI.vue";
 import dofusKeypointDescriptionWorkflow from "@/components/projects/dofus/DofusKeypointDescriptionWorkflow.vue";
 import dofusKeypointDescriptionTacticalCombat
@@ -24,8 +24,9 @@ import bobyKeypointDescriptionWorkflow from "@/components/projects/boby/BobyKeyp
 
 //TODO:import the generated files
 import {
-  bobyKeypointWorkflow,
-  dofusKeypointWorkflow, esquirelKeypointTools, inrsKeypointSteam, jabKeypointOptimization,
+  bobyKeypointResponsive1, bobyKeypointResponsive2, bobyKeypointResponsive3,
+  bobyKeypointWorkflow, dofusKeypointUI1, dofusKeypointUI2, dofusKeypointUI3, dofusKeypointUI4, dofusKeypointUI5,
+  dofusKeypointWorkflow, esquirelKeypointTools, esquirelKeypointTools2, inrsKeypointSteam, jabKeypointOptimization,
   rsmKeypointContentConcept1,
   rsmKeypointContentConcept2,
   rsmKeypointContentConcept3,
@@ -46,6 +47,24 @@ import {
   rSMOverviewPicture,
 } from "@/utils/generated/projectOverviewImagesImports.js"
 import {markRaw} from "vue";
+import esquirelKeypointDescriptionArchitecture
+  from "@/components/projects/esquirel/EsquirelKeypointDescriptionArchitecture.vue";
+import esquirelKeypointDescriptionCapacityReusable
+  from "@/components/projects/esquirel/EsquirelKeypointDescriptionCapacityReusable.vue";
+import esquirelKeypointDescriptionTools from "@/components/projects/esquirel/EsquirelKeypointDescriptionTools.vue";
+import jabKeypointDescriptionAi from "@/components/projects/jab/JabKeypointDescriptionAi.vue";
+import jabKeypointDescriptionTools from "@/components/projects/jab/JabKeypointDescriptionTools.vue";
+import jabKeypointDescriptionCombat from "@/components/projects/jab/JabKeypointDescriptionCombat.vue";
+import jabKeypointDescriptionAiTools from "@/components/projects/jab/JabKeypointDescriptionAiTools.vue";
+import inrsKeypointDescriptionSteam from "@/components/projects/inrs/InrsKeypointDescriptionSteam.vue";
+import inrsKeypointDescriptionCruise from "@/components/projects/inrs/InrsKeypointDescriptionCruise.vue";
+import inrsKeypointDescriptionRopeInteractions
+  from "@/components/projects/inrs/InrsKeypointDescriptionRopeInteractions.vue";
+import inrsKeypointDescriptionRope from "@/components/projects/inrs/InrsKeypointDescriptionRope.vue";
+import rsmKeypointDescriptionConcept from "@/components/projects/rsm/RsmKeypointDescriptionConcept.vue";
+import rsmKeypointDescriptionProducing from "@/components/projects/rsm/RsmKeypointDescriptionProducing.vue";
+import rsmKeypointDescriptionResearch from "@/components/projects/rsm/RsmKeypointDescriptionResearch.vue";
+import rsmKeypointDescriptionPrototype from "@/components/projects/rsm/RsmKeypointDescriptionPrototype.vue";
 
 
 export const useProjectInfoStore = defineStore('projectsInfoStore', {
@@ -86,8 +105,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.ui,
               allKeypointsTags.optimization,
             ],
-            'rocket.png',
-            keypointContentType.image,
+            [dofusKeypointUI1,dofusKeypointUI2,dofusKeypointUI4,dofusKeypointUI3,dofusKeypointUI5],
+            keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
             'Work on tactical combat system',
@@ -97,8 +116,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.network,
               allKeypointsTags.ui,
             ],
-            'test.png',
-            keypointContentType.image,
+            'KVFckpvYTFg',
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Program on others systems',
@@ -108,7 +127,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.ui,
               allKeypointsTags.sound,
             ],
-            'ProjectsOverview.mp4',
+            'V03zxB9SWrw',
             keypointContentType.video,
           ),
         ],
@@ -134,50 +153,51 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         'T7cDLjUOEEQ',
         [
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Refine the Game Vision',
+            rsmKeypointDescriptionConcept,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.gameDesign,
+              allKeypointsTags.presentation,
+              allKeypointsTags.communication,
             ],
             [rsmKeypointContentConcept1, rsmKeypointContentConcept2, rsmKeypointContentConcept3, rsmKeypointContentConcept4, rsmKeypointContentConcept5],
             keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Organize/Coordinate a Team',
+            rsmKeypointDescriptionProducing,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
               allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.pipeline,
+              allKeypointsTags.communication,
+              allKeypointsTags.presentation,
+
+
             ],
             [rsmKeypointContentProducing1, rsmKeypointContentProducing2, rsmKeypointContentProducing3, rsmKeypointContentProducing4, rsmKeypointContentProducing5],
             keypointContentType.swiper,
           ),
 
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Document/Prototype technical challenges',
+           rsmKeypointDescriptionResearch,
             [
+              allKeypointsTags.documentation,
               allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.versionControl,
+              allKeypointsTags.network,
             ],
             'fZ6ramtZYAE',
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Program networked features',
+            rsmKeypointDescriptionPrototype,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
+              allKeypointsTags.network,
               allKeypointsTags.architecture,
+              allKeypointsTags.optimization,
+              allKeypointsTags.ui,
             ],
             [rsmKeypointContentPrototype1, rsmKeypointContentPrototype2,rsmKeypointContentPrototype3, rsmKeypointContentPrototype4, rsmKeypointContentPrototype5],
             keypointContentType.swiper,
@@ -205,49 +225,43 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         'V7y_USOCUTQ',
         [
           new ProjectKeypointInfo(
-            'Programmer une simulation de elastique',
-            esquirelFogKeypointDescription,
+            'Prototype an Elastic Simulation',
+            inrsKeypointDescriptionRope,
             [
               allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.physics,
+              allKeypointsTags.communication
             ],
-            'ProjectsOverview.mp4',
+            'nIlewWikTR8',
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Program Hands-Blocks Interactions',
+            inrsKeypointDescriptionRopeInteractions,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
+              allKeypointsTags.physics,
               allKeypointsTags.architecture,
+              allKeypointsTags.ui
             ],
-            'rocket.png',
-            keypointContentType.image,
+            'nNDeeTLJQas',
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Develop the Cruise phase',
+            inrsKeypointDescriptionCruise,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.physics,
+              allKeypointsTags.techArt,
+              allKeypointsTags.procedural
             ],
-            'test.png',
-            keypointContentType.image,
+            'Ghq8bkwuEbU',
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Release game on Steam',
+            inrsKeypointDescriptionSteam,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.api
             ],
             inrsKeypointSteam,
             keypointContentType.image,
@@ -280,6 +294,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
             bobyKeypointDescriptionWorkflow,
             [
               allKeypointsTags.pipeline,
+              allKeypointsTags.communication,
             ],
            bobyKeypointWorkflow,
             keypointContentType.image,
@@ -289,9 +304,10 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
             bobyKeypointDescriptionModularity,
             [
               allKeypointsTags.architecture,
+              allKeypointsTags.procedural
 
             ],
-            'ProjectsOverview.mp4',
+            'PPEHnNMPOoE',
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
@@ -302,8 +318,8 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
               allKeypointsTags.artIntegration,
               allKeypointsTags.physics,
             ],
-            'rocket.png',
-            keypointContentType.image,
+            'U9bwNeUB20Y',
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
             'Integrate the game in the software',
@@ -311,10 +327,10 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
             [
               allKeypointsTags.php,
               allKeypointsTags.mobile,
-              allKeypointsTags.QA,
+              allKeypointsTags.qA,
             ],
-            'test.png',
-            keypointContentType.image,
+            [bobyKeypointResponsive1, bobyKeypointResponsive2, bobyKeypointResponsive3],
+            keypointContentType.swiper,
           ),
 
         ],
@@ -334,52 +350,53 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         'iLXKFulKzw8',
         [
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Design Networked/Flexible architecture',
+            esquirelKeypointDescriptionArchitecture,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
               allKeypointsTags.architecture,
+              allKeypointsTags.network,
+              allKeypointsTags.research,
+              allKeypointsTags.documentation,
             ],
-            'ProjectsOverview.mp4',
+            'TGd118AC6WA',
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Reuse behaviors for feature development',
+            esquirelKeypointDescriptionCapacityReusable,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.pipeline,
+              allKeypointsTags.communication,
+              allKeypointsTags.combat,
+              allKeypointsTags.physics,
+
             ],
-            "logo",
+            "VAeyjaMLUHk",
             keypointContentType.video,
           ),
+
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Program tools to speed up the iteration workflow.',
+            esquirelKeypointDescriptionTools,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.tools,
+              allKeypointsTags.pipeline,
+              allKeypointsTags.api
             ],
-            'test.png',
-            keypointContentType.image,
+           [ esquirelKeypointTools2,esquirelKeypointTools,],
+            keypointContentType.swiper,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Develop fog of war-related mechanics.',
+            esquirelKeypointDescriptionFog,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.techArt,
+              allKeypointsTags.optimization,
+              allKeypointsTags.combat,
+              allKeypointsTags.network,
             ],
-            esquirelKeypointTools,
-            keypointContentType.image,
+            'MpSTuWdwAMk',
+            keypointContentType.video,
           ),
         ],
         'orange',
@@ -398,57 +415,54 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         jabOverviewPicture,
         'February 2023 until June 2023 (4 months)',
         '2 Game Programmers / 4 Game Designers, 6 Game Artists',
-        'Lead Game Programmer / Tool Programmer',
+        'Lead Game Programmer',
         jabPitch,
         'R5A5sDkaRSw',
         [
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Create behavior tree tools',
+            jabKeypointDescriptionAiTools,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
+              allKeypointsTags.ai,
+              allKeypointsTags.tools,
               allKeypointsTags.architecture,
+              allKeypointsTags.communication
             ],
-            'ProjectsOverview.mp4',
+            '2xl9YyG_9_c',
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Develop mobile combat system',
+            jabKeypointDescriptionCombat,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
+              allKeypointsTags.combat,
+              allKeypointsTags.controller,
+              allKeypointsTags.optimization,
               allKeypointsTags.architecture,
             ],
-            "logo",
+            "Dqy_XJujVn4",
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Program Boss mechanics',
+            jabKeypointDescriptionAi,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.ai,
+
             ],
-            'test.png',
-            keypointContentType.image,
+            "nGsToxcLjuo",
+            keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Test',
-            esquirelFogKeypointDescription,
+            'Coding Trello report window',
+            jabKeypointDescriptionTools,
             [
-              allKeypointsTags.research,
-              allKeypointsTags.lead,
-              allKeypointsTags.producer,
-              allKeypointsTags.architecture,
+              allKeypointsTags.tools,
+              allKeypointsTags.pipeline,
+              allKeypointsTags.api
             ],
-            jabKeypointOptimization,
-            keypointContentType.image,
+            "GF8PHIyv4lg",
+            keypointContentType.video,
           ),
         ],
         'red',

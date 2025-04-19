@@ -44,6 +44,7 @@ export default {
       <main-video v-if="keypoint.keypointContentType === keypointContentType.video" :src="this.keypoint.keypointContentSrc"></main-video>
 
       <content-image v-else-if="keypoint.keypointContentType === keypointContentType.image"  :src="this.keypoint.keypointContentSrc"></content-image>
+      <content-image class="image-spaced" v-else-if="keypoint.keypointContentType === keypointContentType.images" v-for="(image,index) in this.keypoint.keypointContentSrc" :key="index" :src="image"></content-image>
  <main-swiper :image-srcs="this.keypoint.keypointContentSrc" v-else></main-swiper>
     </div>
 
@@ -56,6 +57,9 @@ export default {
 
 </style>
 <style scoped lang="scss">
+.image-spaced{
+  margin-bottom: 20px;
+}
 
 .tags{
   justify-content: left !important;

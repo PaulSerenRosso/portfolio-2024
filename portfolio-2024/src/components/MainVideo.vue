@@ -57,7 +57,7 @@ export default {
       class="main-video"
       height="1920"
       width="1080"
-      :src="'https://www.youtube.com/embed/' + this.src + '?mute=1&enablejsapi=1'"
+      :src="'https://www.youtube.com/embed/' + this.src + '?mute=1&enablejsapi=1&loop=1&playlist='+ this.src"
       allow=""
       allowfullscreen
     >

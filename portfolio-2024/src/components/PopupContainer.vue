@@ -20,8 +20,8 @@ export default defineComponent({
       v-if="gradientColor !== undefined"
       :top="50"
       :left="50"
-      :radius-x="100"
-      :radius-y="100"
+      :radius-x="60"
+      :radius-y="60"
       :color="this.gradientColor"
     ></radial-gradient>
     <div :class="'container ' + this.classContainerName" ref="container">

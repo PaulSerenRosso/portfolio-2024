@@ -15,11 +15,11 @@ export default defineComponent({
 
 <template>
   <div class="welcome-container">
-    <radial-gradient :top="0" :left="10" :radius-x="50" :radius-y="50" color="blue"></radial-gradient>
+    <radial-gradient :top="0" :left="10" :radius-x="30" :radius-y="20" color="blue"></radial-gradient>
 
-    <radial-gradient :top="90" :left="90" :radius-x="50" :radius-y="50" color="yellow"></radial-gradient>
-    <radial-gradient :top="100" :left="0" :radius-x="50" :radius-y="50" color="red"></radial-gradient>
-    <radial-gradient :top="0" :left="100" :radius-x="50" :radius-y="50" color="green"></radial-gradient>
+    <radial-gradient :top="90" :left="90" :radius-x="30" :radius-y="20" color="yellow"></radial-gradient>
+    <radial-gradient :top="100" :left="-5" :radius-x="30" :radius-y="20" color="red"></radial-gradient>
+    <radial-gradient :top="0" :left="100" :radius-x="40" :radius-y="20" color="lightGreen"></radial-gradient>
     <page-title
       text-content="Welcome, I'm Paul, a Game Programmer!"
       class="welcome-title"
@@ -29,7 +29,7 @@ export default defineComponent({
       July
     </main-quote>
     <div class="welcome-video">
-      <main-video  :delay="2000" src="VQ0UPCY5XZY"></main-video>
+      <main-video  :delay="2000" src="sBiSNkU7gks"></main-video>
     </div>
 
   </div>

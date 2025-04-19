@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <main-image :src="src" class="content-image"></main-image>
+  <main-image :is-lazy="true" :src="src" class="content-image"></main-image>
 </template>
 
 <style scoped lang="scss">

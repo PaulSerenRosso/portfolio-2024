@@ -17,6 +17,11 @@ export default defineComponent({
     Subtitle,
     PageTitle,
   },
+  data(){
+    return{
+      
+    }
+  }
 })
 </script>
 

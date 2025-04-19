@@ -3,8 +3,12 @@ import gmailPropPngImported from "@/assets/generated/props/GmailProp.png";
 import gmailPropWebpImported from "@/assets/generated/props/GmailProp.webp";
 import rolePropPngImported from "@/assets/generated/props/RoleProp.png";
 import rolePropWebpImported from "@/assets/generated/props/RoleProp.webp";
+import targetPropPngImported from "@/assets/generated/props/TargetProp.png";
+import targetPropWebpImported from "@/assets/generated/props/TargetProp.webp";
 import teamPropPngImported from "@/assets/generated/props/TeamProp.png";
 import teamPropWebpImported from "@/assets/generated/props/TeamProp.webp";
+import timelinePropPngImported from "@/assets/generated/props/TimelineProp.png";
+import timelinePropWebpImported from "@/assets/generated/props/TimelineProp.webp";
 import twitterPropPngImported from "@/assets/generated/props/TwitterProp.png";
 import twitterPropWebpImported from "@/assets/generated/props/TwitterProp.webp";
 export const  gmailProp= {
@@ -15,9 +19,17 @@ export const  roleProp= {
     png: rolePropPngImported,
     webp: rolePropWebpImported,
   };
+export const  targetProp= {
+    png: targetPropPngImported,
+    webp: targetPropWebpImported,
+  };
 export const  teamProp= {
     png: teamPropPngImported,
     webp: teamPropWebpImported,
+  };
+export const  timelineProp= {
+    png: timelinePropPngImported,
+    webp: timelinePropWebpImported,
   };
 export const  twitterProp= {
     png: twitterPropPngImported,
