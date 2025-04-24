@@ -32,7 +32,7 @@ export default {
 
 <template>
   <div class="keypoint-details-container">
-    <popup-container class="pop-up-root" class-container-name="keypoint-popup-container" :gradient-color="this.colorGradient">
+    <popup-container :is-lazy="true" class="pop-up-root" class-container-name="keypoint-popup-container" :gradient-color="this.colorGradient">
       <tags-container class="tags" :tags="this.keypoint.keypointTags"></tags-container>
       <subtitle>  <span class="number">{{index}}.</span> {{this.keypoint.keypointName}}</subtitle>
 
@@ -43,8 +43,8 @@ export default {
     <div class="content">
       <main-video v-if="keypoint.keypointContentType === keypointContentType.video" :src="this.keypoint.keypointContentSrc"></main-video>
 
-      <content-image v-else-if="keypoint.keypointContentType === keypointContentType.image"  :src="this.keypoint.keypointContentSrc"></content-image>
-      <content-image class="image-spaced" v-else-if="keypoint.keypointContentType === keypointContentType.images" v-for="(image,index) in this.keypoint.keypointContentSrc" :key="index" :src="image"></content-image>
+      <content-image :is-lazy="true" v-else-if="keypoint.keypointContentType === keypointContentType.image"  :src="this.keypoint.keypointContentSrc"></content-image>
+      <content-image :is-lazy="true" class="image-spaced" v-else-if="keypoint.keypointContentType === keypointContentType.images" v-for="(image,index) in this.keypoint.keypointContentSrc" :key="index" :src="image"></content-image>
  <main-swiper :image-srcs="this.keypoint.keypointContentSrc" v-else></main-swiper>
     </div>
 

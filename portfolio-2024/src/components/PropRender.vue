@@ -5,6 +5,7 @@ export default defineComponent({
   name: 'PropRender',
   props: {
     src: {},
+    isLazy:{ Boolean, default: true },
   },
   mounted() {
 
@@ -24,7 +25,7 @@ export default defineComponent({
   <div ref="propContainer" class="prop-container">
     <picture>
       <source :srcset="this.src.webp" type="image/webp" />
-      <img loading="lazy" class="prop-render" :src="this.src.png" />
+      <img :loading="this.isLazy?'lazy':'eager'" class="prop-render" :src="this.src.png" />
     </picture>
   </div>
 </template>

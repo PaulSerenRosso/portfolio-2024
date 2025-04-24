@@ -15,11 +15,11 @@ export default defineComponent({
 
 <template>
   <div class="welcome-container">
-    <radial-gradient :top="0" :left="10" :radius-x="30" :radius-y="20" color="blue"></radial-gradient>
+    <radial-gradient :is-lazy="false" :top="0" :left="10" :radius-x="30" :radius-y="20" color="blue"></radial-gradient>
 
-    <radial-gradient :top="90" :left="90" :radius-x="30" :radius-y="20" color="yellow"></radial-gradient>
-    <radial-gradient :top="100" :left="-5" :radius-x="30" :radius-y="20" color="red"></radial-gradient>
-    <radial-gradient :top="0" :left="100" :radius-x="40" :radius-y="20" color="lightGreen"></radial-gradient>
+    <radial-gradient :is-lazy="false" :top="90" :left="90" :radius-x="30" :radius-y="20" color="yellow"></radial-gradient>
+    <radial-gradient :is-lazy="false" :top="100" :left="-5" :radius-x="30" :radius-y="20" color="red"></radial-gradient>
+    <radial-gradient :is-lazy="false" :top="0" :left="100" :radius-x="40" :radius-y="20" color="lightGreen"></radial-gradient>
     <page-title
       text-content="Welcome, I'm Paul, a Game Programmer!"
       class="welcome-title"

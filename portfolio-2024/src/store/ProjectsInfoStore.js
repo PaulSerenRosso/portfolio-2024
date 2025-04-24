@@ -137,7 +137,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
       ),
       rsmProject: new ProjectInfo(
         '[WIP] RSM',
-        'Semi-cooperative social horror game at 4 players',
+        'Semi-cooperative social horror game for 4 players',
         [
           allProjectsTags.studentProject,
           allProjectsTags.wip,
@@ -210,7 +210,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
       ),
       inrsProject: new ProjectInfo(
         "It's not rocket science!",
-        'Physic-based 2v2 party game with collaboration and sabotage',
+        'A physics-based 2v2 party game featuring collaboration and sabotage',
         [
           allProjectsTags.studentProject,
           allProjectsTags.unreal,
@@ -274,7 +274,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
 
       bobyProject: new ProjectInfo(
         'Boby',
-        'Casual arcade game to web application for gamification',
+        'A web-based casual arcade game designed for gamification.',
         [
           allProjectsTags.internship,
           allProjectsTags.web,
@@ -340,7 +340,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
       ),
       esquirelProject: new ProjectInfo(
         'Esquirel',
-        'Capture the point MOBA with ambushes and squirrels',
+        'A capture-the-point MOBA with ambush mechanics and squirrels.',
         [allProjectsTags.studentProject, allProjectsTags.unity, allProjectsTags.cSharp],
         esquirelOverviewPicture,
         'November 2022 until February 2023 (2 months)',
@@ -405,7 +405,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
       ),
       jabProject: new ProjectInfo(
         'Jab',
-        'Fight-Taunt-Action game with iconic boss',
+        'Fight-Taunt-Action game with iconic bosses',
         [
           allProjectsTags.studentProject,
           allProjectsTags.unity,

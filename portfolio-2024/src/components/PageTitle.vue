@@ -1,10 +1,11 @@
 <script>
 import { defineComponent } from 'vue'
-import LettersAnimation from '@/components/LettersAnimation.vue'
+
+import SlideInAnimation from '@/components/SlideInAnimation.vue'
 
 export default defineComponent({
   name: 'PageTitle',
-  components: { LettersAnimation },
+  components: { SlideInAnimation},
   props: {
     textContent: String,
   },
@@ -13,7 +14,9 @@ export default defineComponent({
 
 <template>
   <div class="page-title-container">
-    <letters-animation :delay="1000" :text-content="textContent"></letters-animation>
+    <slide-in-animation :delay="500" :is-right-direction="false">
+      <div>{{textContent}}</div>
+    </slide-in-animation>
   </div>
 </template>
 

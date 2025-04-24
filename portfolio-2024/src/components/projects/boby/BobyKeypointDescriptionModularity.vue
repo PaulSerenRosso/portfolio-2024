@@ -15,8 +15,8 @@ export default defineComponent({
   <div>
     <space-paragraph>
       During my internship, I needed to ensure that the game was <bold-element>easily adjustable</bold-element> for <bold-element>future
-      developers</bold-element>. Designed as a quick, <bold-element>casual</bold-element> distraction—similar to the <link-element link="https://en.wikipedia.org/wiki/Dinosaur_Game">dinosaur game</link-element>
-      offers three <bold-element>difficulty modes</bold-element> and heavily relies on <bold-element>randomness</bold-element>. This randomness influences
+      developers</bold-element>. Designed as a quick, <bold-element>casual</bold-element> distraction, it offers three <bold-element>difficulty modes</bold-element>. Similar to the <link-element link="https://en.wikipedia.org/wiki/Dinosaur_Game">dinosaur game</link-element>,
+      it heavily relies on <bold-element>randomness</bold-element> and on the <bold-element>progression of the difficulty</bold-element>. This randomness influences
       enemy positions, types, and attributes such as size, health, and spawn count. The game is
       built with <bold-element>pure JavaScript</bold-element>, CSS, and HTML, ensuring seamless integration without external
       libraries.

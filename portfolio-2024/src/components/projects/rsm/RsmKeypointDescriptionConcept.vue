@@ -19,7 +19,7 @@ export default defineComponent({
       mission was to <bold-element>refine</bold-element> the concept and compare the original vision with <bold-element>new perspectives</bold-element>. To
       support this process, we conducted in depth <bold-element>research</bold-element> on <bold-element>liminal spaces</bold-element> and <bold-element>cooperative
       horror games</bold-element>. We engaged in numerous <bold-element>brainstorming</bold-element> sessions with the original vision holder
-      to <bold-element>shape</bold-element> both the <bold-element>artistic direction</bold-element> and the <bold-element>game intentions</bold-element> and <bold-element>core mechanics</bold-element>, despite not yet having any dedicated
+      to <bold-element>shape</bold-element> the <bold-element>artistic direction</bold-element> and the <bold-element>game intentions</bold-element> and <bold-element>core mechanics</bold-element>, despite not yet having any dedicated
       designers on board.
     </space-paragraph>
     <main-paragraph>

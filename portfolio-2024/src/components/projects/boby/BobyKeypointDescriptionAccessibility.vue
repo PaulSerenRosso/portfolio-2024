@@ -20,11 +20,11 @@ export default defineComponent({
     <space-paragraph>
     Since the game has an arcade style, destroying components needed to feel satisfying. I
       developed various <bold-element>CSS animation classes</bold-element>, handled by  <bold-element>timers in JavaScript</bold-element>,
-      for damaged component effects, tool using, user interfaces, and power-ups.
+      for damaged component effects, tools using, user interfaces, and power-ups.
     </space-paragraph>
     <space-paragraph>
       Regarding
-      <bold-element>physics-based</bold-element> feedback, I worked on enemy destruction animations using <bold-element>collision detection</bold-element>. Another example is with the saw, where I designed <bold-element>special bounding colliders</bold-element> around the plank.
+      <bold-element>physics-based</bold-element> feedbacks, I worked on enemy destruction animations using <bold-element>collision detection</bold-element>. Another example is with the saw, where I designed <bold-element>special bounding colliders</bold-element> around the plank.
       To cut the plank, the player must collide with at least two bounding colliders, making the action
       feel more realistic.
     </space-paragraph>

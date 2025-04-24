@@ -26,7 +26,7 @@ import MenuBar from '@/components/MenuBar.vue'
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  filter: blur(50px);
+
 }
 </style>
 

@@ -38,14 +38,14 @@ export default {
 <template>
   <div class="project-summary-container">
     <div class="project-summary-header" ref="header">
-      <radial-gradient
+      <radial-gradient :is-lazy="false"
         :top="0"
         :left="0"
         :radius-x="40"
         :radius-y="40"
         :color="this.firstGradientColor"
       ></radial-gradient>
-      <radial-gradient
+      <radial-gradient :is-lazy="false"
         :top="100"
         :left="0"
         :radius-x="40"
@@ -53,7 +53,7 @@ export default {
         :color="this.firstGradientColor"
       ></radial-gradient>
 
-      <radial-gradient :top="100" :left="100" :radius-x="60" :radius-y="60" :color="this.secondGradientColor">
+      <radial-gradient :is-lazy="false" :top="100" :left="100" :radius-x="60" :radius-y="60" :color="this.secondGradientColor">
       </radial-gradient>
       <tags-container class="tag-container" :tags="this.tagsText"></tags-container>
       <page-title  :text-content="this.projectName" > </page-title>
@@ -63,19 +63,19 @@ export default {
     </div>
     <div class="project-summary-content">
       <div class="project-summary-grid">
-        <prop-popup :src="timelineProp" >
+        <prop-popup :is-lazy="false" :src="timelineProp" >
           <template v-slot:title>When?</template>
           <template v-slot:paragraph
           >{{this.timelineText}}
           </template>
         </prop-popup>
-        <prop-popup :src="teamProp" >
+        <prop-popup :is-lazy="false" :src="teamProp" >
           <template v-slot:title>What is the team ?</template>
           <template v-slot:paragraph
           >{{this.staffText}}
           </template>
         </prop-popup>
-        <prop-popup :src="roleProp" >
+        <prop-popup :is-lazy="false" :src="roleProp" >
           <template v-slot:title>What is my role?</template>
           <template v-slot:paragraph
           >{{this.roleText}}

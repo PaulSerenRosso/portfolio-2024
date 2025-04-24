@@ -10,13 +10,14 @@ export default defineComponent({
   props: {
     classContainerName: String,
     gradientColor: String,
+    isLazy:{ Boolean, default: true },
   },
 })
 </script>
 
 <template>
   <div class="root">
-    <radial-gradient
+    <radial-gradient :is-lazy="isLazy"
       v-if="gradientColor !== undefined"
       :top="50"
       :left="50"

@@ -12,7 +12,7 @@ export default defineComponent({
   components: {PropRender, MainImage, Subtitle, MainParagraph, PageTitle, PopupContainer },
   props: {
     src: {},
-
+    isLazy:{ Boolean, default: true },
     gradientColor: String,
   },
 })
@@ -20,12 +20,12 @@ export default defineComponent({
 
 <template>
   <div class="prop-popup-root">
-    <popup-container
+    <popup-container :is-lazy="isLazy"
       :gradient-color="this.gradientColor"
       class-container-name="prop-popup-container"
     >
       <div class="prop-render">
-        <prop-render  :src="this.src"></prop-render>
+        <prop-render :is-lazy="isLazy"  :src="this.src"></prop-render>
       </div>
 
       <subtitle class="subtitle">

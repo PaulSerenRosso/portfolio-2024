@@ -27,6 +27,7 @@ export default {
   },
   methods: {
     playVideo() {
+      console.log("test")
       const iframe = this.$refs.video
       iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
     },
@@ -46,13 +47,14 @@ export default {
 <template>
   <tv-border :delay="this.delay">
     <template v-slot:scrollingTrigger>
-      <scrolling-trigger-flip-flop style="position: absolute; top: 50%;" v-if="isLoaded"
+      <scrolling-trigger-flip-flop  style="position: absolute; top: 50%;" v-if="isLoaded"
         :delay="1000"
         @triggerOnFlipScrolling="this.playVideo"
         @triggerOnFlopScrolling="this.pauseVideo"
       ></scrolling-trigger-flip-flop>
     </template>
     <iframe
+      loading="lazy"
       ref="video"
       class="main-video"
       height="1920"

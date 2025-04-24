@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <page-title class="key-projects-title" text-content="Watch out my projects!"></page-title>
+  <page-title class="key-projects-title" text-content="Check out my projects!"></page-title>
   <div class="key-projects-container">
     <div v-for="(projectInfo, index) in this.projectsInfoStore.allProjectsInfo" :key="index">
       <project-overview

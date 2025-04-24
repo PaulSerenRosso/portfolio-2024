@@ -7,10 +7,10 @@ export default {
   components: {MainButton, ScrollingTrigger },
   props: {
     src: {},
-    isLazy:Boolean,
+    isLazy:{ Boolean, default: true },
     delay: Number,
     hasAnimation:{ Boolean, default: true },
-
+    imageClass:String,
   },
   mounted() {
 
@@ -38,7 +38,7 @@ export default {
     ></scrolling-trigger>
     <picture>
       <source  :srcset="this.src.webp"  type="image/webp">
-      <img :loading="this.isLazy?'lazy':'eager'" class="main-image" :src="this.src.jpg">
+      <img :loading="this.isLazy?'lazy':'eager'" :class="'main-image '+ this.imageClass" :src="this.src.jpg">
     </picture>
 
 

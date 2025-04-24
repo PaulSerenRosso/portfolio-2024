@@ -11,17 +11,17 @@ const PROPS_INPUT_DIR = 'src/toGenerated/props'; // your source images
 const PROPS_OUTPUT_DIR = 'src/assets/generated/props'; // accessible in your final build
 const GRADIENTS_INPUT_DIR = 'src/toGenerated/gradients'; // your source images
 const GRADIENTS_OUTPUT_DIR = 'src/assets/generated/gradients'; // accessible in your final build
-const CONTENT_SIZES = 1920;
+const CONTENT_SIZES = 1600;
 const PROPS_SIZES = 500;
-const GRADIENTS_SIZES = 1920;
+const GRADIENTS_SIZES = 1300;
 const CONTENT_FORMAT = ['jpeg', "webp"];
 const PROP_FORMAT = ["png", "webp"];
 const GRADIENT_FORMAT = ["png", "webp"];
 resizeImage(KEYPOINTS_INPUT_DIR, KEYPOINTS_OUTPUT_DIR, CONTENT_SIZES, CONTENT_FORMAT);
 resizeImage(OVERVIEW_INPUT_DIR, OVERVIEW_OUTPUT_DIR, CONTENT_SIZES, CONTENT_FORMAT );
-resizeImage(PROPS_INPUT_DIR, PROPS_OUTPUT_DIR,PROPS_SIZES, PROP_FORMAT,80);
-resizeImage(GRADIENTS_INPUT_DIR, GRADIENTS_OUTPUT_DIR, GRADIENTS_SIZES, GRADIENT_FORMAT,100  )
-function resizeImage(inputDir, outputDir, size, formats, pngQuality) {
+resizeImage(PROPS_INPUT_DIR, PROPS_OUTPUT_DIR,PROPS_SIZES, PROP_FORMAT);
+resizeImage(GRADIENTS_INPUT_DIR, GRADIENTS_OUTPUT_DIR, GRADIENTS_SIZES, GRADIENT_FORMAT )
+function resizeImage(inputDir, outputDir, size, formats) {
 
 
   fs.readdirSync(inputDir).forEach(file => {
@@ -32,7 +32,7 @@ function resizeImage(inputDir, outputDir, size, formats, pngQuality) {
       switch (format){
         case "jpeg":{
           sharp(inputPath).toFormat("jpeg")
-            .resize(size)
+            .resize(size).jpeg({quality:80})
             .toFile(path.join(outputDir, `${name}.jpg`))
             .then(() => console.log(`Created ${name}.jpg`))
             .catch(err => console.error(err));
@@ -40,7 +40,7 @@ function resizeImage(inputDir, outputDir, size, formats, pngQuality) {
         }
         case "webp":{
           sharp(inputPath).toFormat("webp")
-            .resize(size)
+            .resize(size).webp({quality:80})
             .toFile(path.join(outputDir, `${name}.webp`))
             .then(() => console.log(`Created ${name}.webp`))
             .catch(err => console.error(err));
@@ -48,7 +48,7 @@ function resizeImage(inputDir, outputDir, size, formats, pngQuality) {
         }
         case "png":{
           sharp(inputPath).toFormat("png")
-            .resize(size).png({quality:pngQuality})
+            .resize(size).png({quality:100})
             .toFile(path.join(outputDir, `${name}.png`))
             .then(() => console.log(`Created ${name}.png`))
             .catch(err => console.error(err));

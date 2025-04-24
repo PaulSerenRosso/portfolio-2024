@@ -32,7 +32,7 @@ export default defineComponent({
     In  <bold-element>August 2024</bold-element>, Ankama reached a significant milestone with the launch of the open
     <bold-element>beta of Dofus 3.0</bold-element>, a modernized version of the original game. This major update is based on the
     transition <bold-element>from the Flash engine to Unity</bold-element>, a decision driven by several factors. Firstly, the
-    gradual phase-out of Flash by web browsers made it necessary to adopt a more <bold-element>sustainable
+    gradual phase-out of Flash made it necessary to adopt a more <bold-element>sustainable
     technology</bold-element>. Secondly, Unity offers greater flexibility, <bold-element>making it easier to integrate new
     features</bold-element>, enhance <bold-element>graphics</bold-element>, and <bold-element>optimize</bold-element> the game's performance.
   </main-paragraph>

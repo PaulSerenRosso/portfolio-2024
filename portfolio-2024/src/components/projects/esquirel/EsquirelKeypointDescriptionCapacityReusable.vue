@@ -37,12 +37,10 @@ export default defineComponent({
     </space-paragraph>
     <space-paragraph>
       For the
-      <bold-element>Bezier curve</bold-element>
-      , I had to
+      <bold-element>Bezier curve</bold-element>, I had to
       <bold-element>abstract</bold-element>
       the behavior to support
-      <bold-element>multiple use cases</bold-element>
-      . I used
+      <bold-element>multiple use cases</bold-element>. I used
       <bold-element>callbacks</bold-element>
       to handle events like dealing area damage at the curve's endpoint or triggering the smoke
       effect. I also handled the
@@ -53,8 +51,7 @@ export default defineComponent({
       However, the biggest challenge was
       <bold-element
         >determining whether an object could be placed at the end of the curve and where
-      </bold-element>
-      . Especially to avoid the object following the curve end inside a wall. I created a helper
+      </bold-element>. Especially to avoid the object following the curve end inside a wall. I created a helper
       algorithm that used
       <bold-element>raycasts</bold-element>
       to check if the target destination was valid. If not, the algorithm would search for
@@ -68,7 +65,7 @@ export default defineComponent({
     </space-paragraph>
     <main-paragraph>
       Finally, another example of reused behavior was the <bold-element>capture point</bold-element> that I developed as well. We reused
-      the capture point logic to create two types of capture points—one that produces <bold-element>nuts</bold-element> and
+      the capture point logic to create two types of capture points, one that produces <bold-element>nuts</bold-element> and
       another that produces <bold-element>gold</bold-element>. This simple change became a key part of the <bold-element>macro game's dynamics</bold-element>.
     </main-paragraph>
   </div>

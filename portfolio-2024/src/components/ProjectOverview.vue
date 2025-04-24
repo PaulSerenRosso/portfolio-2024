@@ -14,20 +14,7 @@ import {
 
 export default {
   name: 'ProjectOverview',
-  computed: {
-    rsmKeypointContentPrototype5() {
-      return rsmKeypointContentPrototype5
-    },
-    rsmKeypointContentProducing1() {
-      return rsmKeypointContentProducing1
-    },
-    rsmKeypointContentConcept2() {
-      return rsmKeypointContentConcept2
-    },
-    rsmKeypointContentConcept1() {
-      return rsmKeypointContentConcept1
-    }
-  },
+
   components: {
 
 
@@ -53,12 +40,10 @@ export default {
 <template>
   <popup-container class="project-overview-root"
     class-container-name="project-overview-container"
-    :gradient-color="this.gradientColor">
+    :gradient-color="this.gradientColor" :is-lazy="false">
 
-    <router-link :to="this.link">
-      <div style="overflow: hidden; border-radius: 50px;  aspect-ratio: 16/9;">
-        <main-image class="overview-picture" :src="this.PictureOverviewSrc"></main-image>
-      </div>
+    <router-link class="project-overview-image-container" :to="this.link">
+      <main-image image-class="project-overview-image" class="overview-picture" :is-lazy="false" :src="this.PictureOverviewSrc"></main-image>
     </router-link>
 
     <tags-container class="project-overview-tag-container" :tags="this.tags"></tags-container>
@@ -68,7 +53,7 @@ export default {
 
     <div class="project-overview-footer">
       <router-link class="link" :to="this.link">
-        <main-button :has-animation="false">Discover the Project!</main-button>
+        <main-button :has-animation="false">Explore the Project!</main-button>
 
       </router-link>
 
@@ -78,8 +63,22 @@ export default {
 
   </popup-container>
 </template>
+<style>
+.project-overview-image{
+ aspect-ratio: 16/9;
+}
+</style>
 
 <style lang="scss">
+.project-overview-image-container{
+  overflow: hidden;
+  border-radius: 50px;
+  aspect-ratio: 16/9;
+  width: 100%;
+  position: relative;
+  max-height: 100%;
+}
+
 .project-overview-root {
   padding-bottom: 0 !important;
   padding-top: 0 !important;

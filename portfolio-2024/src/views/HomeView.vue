@@ -15,7 +15,7 @@ import ScrollReset from "@/components/ScrollReset.vue";
   <about-me-container></about-me-container>
   <resume-container></resume-container>
   <end-redirector
-    text-content="Watch out my experiences and student projects"
+    text-content="Check out my experiences and student projects"
     link="/keyProjects"
   ></end-redirector>
   <scroll-reset/>

@@ -18,9 +18,9 @@ export default defineComponent({
       <bold-element>polishing</bold-element> phase, we decided to
       <bold-element>release</bold-element> our game on <bold-element>Steam</bold-element>. I helped
       integrate the
-      <link-element link="https://partner.steamgames.com/doc/sdk">Steam SDK</link-element> and
-      ensured the build followed all the necessary rules imposed by Steam. I also created the game's
-      <bold-element>Steam page</bold-element>, set up <bold-element>achievements</bold-element>, and
+      <link-element link="https://partner.steamgames.com/doc/sdk">Steam SDK</link-element>, created the <bold-element>Steam page</bold-element>, and
+      ensured the build followed all the necessary rules imposed by Steam. I also
+      set up <bold-element>achievements</bold-element>, and
       linked them to in-game behaviors in our code.
     </main-paragraph>
   </div>

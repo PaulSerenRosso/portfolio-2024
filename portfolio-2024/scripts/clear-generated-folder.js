@@ -2,6 +2,7 @@
 const KEYPOINTS_OUTPUT_DIR = 'src/assets/generated/projectsKeypoints'; // accessible in your final build
 const OVERVIEW_OUTPUT_DIR = 'src/assets/generated/projectsOverview'; // accessible in your final build
 const PROPS_OUTPUT_DIR = 'src/assets/generated/props'; // accessible in your final build
+const GRADIENTS_OUTPUT_DIR = 'src/assets/generated/gradients';
 import fs from 'fs';
 import path from 'path';
 function clearFolder(folderPath) {
@@ -38,3 +39,4 @@ function clearFolder(folderPath) {
   clearFolder(KEYPOINTS_OUTPUT_DIR);
   clearFolder(OVERVIEW_OUTPUT_DIR);
   clearFolder(PROPS_OUTPUT_DIR);
+  clearFolder(GRADIENTS_OUTPUT_DIR);

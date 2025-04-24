@@ -6,7 +6,7 @@ import PropPopup from "@/components/PropPopup.vue";
 import MainButton from "@/components/MainButton.vue";
 import LinkButton from "@/components/LinkButton.vue";
 import PageTitle from "@/components/PageTitle.vue";
-import {gmailProp, twitterProp} from "@/utils/generated/propsImagesImports.js";
+import {gmailProp, linkedinProp, twitterProp} from "@/utils/generated/propsImagesImports.js";
 
 export default defineComponent({
   name: 'ContactView',
@@ -16,6 +16,7 @@ export default defineComponent({
       clipBoardAnimationTimer:undefined,
       twitterProp:twitterProp,
       gmailProp:gmailProp,
+      linkedinProp:linkedinProp,
     }
   },
   methods: {
@@ -45,15 +46,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <page-title class="contact-title" text-content="Choose your way to contact me!"></page-title>
+  <page-title class="contact-title" text-content="Pick how to reach me!"></page-title>
   <div class="contacts-grid">
-    <prop-popup src="/manette.png" gradient-color="darkenBlue">
+    <prop-popup :is-lazy="false" :src="linkedinProp" gradient-color="darkenBlue">
       <template v-slot:title>My Linkedin</template>
       <template v-slot:paragraph>
       <link-button link="https://www.linkedin.com/in/paul-seren-rosso/">Get it!</link-button>
       </template>
     </prop-popup>
-    <prop-popup :src="gmailProp" gradient-color="red">
+    <prop-popup :is-lazy="false" :src="gmailProp" gradient-color="red">
       <template v-slot:title> My Mail</template>
       <template v-slot:paragraph>
         <div>
@@ -66,14 +67,14 @@ export default defineComponent({
 
       </template>
     </prop-popup>
-    <prop-popup src="/manette.png" gradient-color="yellow">
+    <prop-popup :is-lazy="false" src="/manette.png" gradient-color="yellow">
       <template v-slot:title>My Github</template>
       <template v-slot:paragraph
       >
         <link-button link="https://github.com/PaulSerenRosso">Get it!</link-button>
       </template>
     </prop-popup>
-    <prop-popup :src="twitterProp" gradient-color="green">
+    <prop-popup :is-lazy="false" :src="twitterProp" gradient-color="green">
       <template v-slot:title> My Twitter</template>
       <template v-slot:paragraph>
         <link-button link="https://twitter.com/tiondel_">Get it!</link-button>

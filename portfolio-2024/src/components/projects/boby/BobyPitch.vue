@@ -21,7 +21,7 @@ export default defineComponent({
     category, which aims to <bold-element>digitize</bold-element> and <bold-element>modernize</bold-element> the construction sector with innovative tools.
   </space-paragraph>
   <space-paragraph>
-    Boby’s flagship product is a <bold-element>SaaS</bold-element> (Software as a Service) application named "Boby,"
+    Boby’s flagship product is a <bold-element>SaaS</bold-element> (Software as a Service) application named "Boby",
     which provides construction artisans with a comprehensive range of features to <bold-element>optimize their
     daily management.</bold-element>
   </space-paragraph>

@@ -37,6 +37,7 @@ export default defineComponent({
     left: Number,
     radiusX:Number,
     radiusY:Number,
+    isLazy:{ Boolean, default: true },
   },
   setup() {
     const cssStore = useCSSStore()
@@ -51,7 +52,7 @@ export default defineComponent({
     <picture>
 
       <source :srcset="this.Colors[this.color].webp">
-      <img loading="lazy" :style="{top:this.top+'%', left:this.left+'%', width:this.radiusX*2+'%', height:this.radiusY*2+'%'}" :src="Colors[this.color].png" ref="container" class="background-radial-gradient" >
+      <img :loading="this.isLazy?'lazy':'eager'" :style="{top:this.top+'%', left:this.left+'%', width:this.radiusX*2+'%', height:this.radiusY*2+'%'}" :src="Colors[this.color].png" ref="container" class="background-radial-gradient" >
     </picture>
 
 
@@ -67,6 +68,7 @@ export default defineComponent({
   z-index: -1;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  user-select: none; /* Prevents text selection */
 
 
 filter: blur(50px);
