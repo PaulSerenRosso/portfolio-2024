@@ -22,7 +22,7 @@ export default defineComponent({
   </space-paragraph>
   <space-paragraph>
     Boby’s flagship product is a <bold-element>SaaS</bold-element> (Software as a Service) application named "Boby",
-    which provides construction artisans with a comprehensive range of features to <bold-element>optimize their
+    which provides construction small companies with a comprehensive range of features to <bold-element>optimize their
     daily management.</bold-element>
   </space-paragraph>
   <space-paragraph>

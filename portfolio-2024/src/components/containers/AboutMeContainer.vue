@@ -6,7 +6,13 @@ import MainParagraph from '@/components/MainParagraph.vue'
 import PropPopup from '@/components/PropPopup.vue'
 import RadialGradient from '@/components/RadialGradient.vue'
 import MainQuote from '@/components/MainQuote.vue'
-import { curiosityProp, hobbyProp, targetProp } from '@/utils/generated/propsImagesImports.js'
+import {
+  collaborationProp,
+   cookProp,
+  curiosityProp,
+  hobbyProp, sportProp,
+  targetProp
+} from '@/utils/generated/propsImagesImports.js'
 
 export default defineComponent({
   name: 'AboutMeContainer',
@@ -23,6 +29,11 @@ export default defineComponent({
       targetProp: targetProp,
       curiosityProp: curiosityProp,
       hobbyProp: hobbyProp,
+      collaborationProp:collaborationProp,
+      cookProp:cookProp,
+      sportProp:sportProp,
+
+
     }
   },
 })
@@ -33,37 +44,36 @@ export default defineComponent({
     <page-title class="about-me-title" text-content="What about me?"></page-title>
     <div class="about-me-grid">
       <prop-popup :is-lazy="true" :src="targetProp" gradient-color="red">
-        <template v-slot:title>Rebounds of failure</template>
+        <template v-slot:title>Go forward and always keep learning</template>
         <template v-slot:paragraph>
           I strive to see failure as an opportunity to grow, not as a roadblock. I take the time to
-          reflect, understand what caused the failure, learn from it, and continue on my path.
+          reflect, understand what caused it, learn from it, and continue on my path.
         </template>
       </prop-popup>
       <prop-popup :is-lazy="true" :src="curiosityProp" gradient-color="yellow">
-        <template v-slot:title> Program with curiosity</template>
+        <template v-slot:title>Program with curiosity</template>
         <template v-slot:paragraph>
-          I’m passionate about learning across all areas of programming, regardless the languages or
-          game engines. I truly enjoy crafting solutions tailored to the needs of the project and
-          the team.
+          I’m passionate about learning across all areas of programming, regardless languages or
+          game engines. I truly enjoy crafting solutions tailored to the needs of both project and team.
         </template>
       </prop-popup>
-      <prop-popup :is-lazy="true" src="/rocket.png" gradient-color="cyan">
-        <template v-slot:title>Inspired by my team</template>
+      <prop-popup :is-lazy="true" :src="collaborationProp" gradient-color="cyan">
+        <template v-slot:title>Find inspiration in my team</template>
         <template v-slot:paragraph>
           I find it incredibly enriching to understand the knowledge and challenges my teammates
-          faced, and how my work supports and connects with theirs.
+          face, and how my work supports and connects with theirs.
         </template>
       </prop-popup>
-      <prop-popup :is-lazy="true" src="/fraise.png" gradient-color="blue">
-        <template v-slot:title> Sport for Self improving</template>
+      <prop-popup :is-lazy="true" :src="sportProp" gradient-color="blue">
+        <template v-slot:title> Improve myself through sport </template>
         <template v-slot:paragraph>
           After 10 years of competitive handball, I now thrive on sports like badminton, swimming,
           and tennis. I love how they build focus, values, and determination. Currently, I'm
           training for a half marathon!
         </template>
       </prop-popup>
-      <prop-popup :is-lazy="true" src="/manette.png" gradient-color="green">
-        <template v-slot:title>Cooking, eating good foods!</template>
+      <prop-popup :is-lazy="true" :src="cookProp" gradient-color="green">
+        <template v-slot:title>Cook, enjoy good foods!</template>
         <template v-slot:paragraph>
           On weekends, I love spending several hours batch-cooking to plan my lunches, choose the
           right ingredients, and prepare meals for the week. It helps me disconnect from work and
@@ -71,7 +81,7 @@ export default defineComponent({
         </template>
       </prop-popup>
       <prop-popup :is-lazy="true" :src="hobbyProp" gradient-color="violet">
-        <template v-slot:title>Exploring life across medias!</template>
+        <template v-slot:title>Experience moments across diverse media!</template>
         <template v-slot:paragraph>
           I love diving into video game experiences, playing board games with friends, and exploring
           the captivating worlds of movies and books.

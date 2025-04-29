@@ -14,7 +14,7 @@ export default defineComponent({
 <template>
   <div>
   <space-paragraph>
-   <link-element link="https://www.ankama.com/en">Ankama</link-element>  is an independent company <bold-element>(~200 people)</bold-element> specializing in digital creation in the
+   <link-element link="https://www.ankama.com/en">Ankama</link-element>  is an independent company <bold-element>(~200 people)</bold-element> specialized in digital creation in the
     entertainment industry. It is renowned for its ability to create rich universes connected across
     <bold-element>multiple media</bold-element>, including video games, animation, board games, and comics.
   </space-paragraph>

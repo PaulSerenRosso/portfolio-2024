@@ -70,7 +70,7 @@ export default {
           </template>
         </prop-popup>
         <prop-popup :is-lazy="false" :src="teamProp" >
-          <template v-slot:title>What is the team ?</template>
+          <template v-slot:title>Who is the team?</template>
           <template v-slot:paragraph
           >{{this.staffText}}
           </template>

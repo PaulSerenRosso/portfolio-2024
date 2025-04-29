@@ -5,10 +5,11 @@ import PageTitle from '@/components/PageTitle.vue'
 import RadialGradient from '@/components/RadialGradient.vue'
 import MainParagraph from '@/components/MainParagraph.vue'
 import MainQuote from '@/components/MainQuote.vue'
+import LinkElement from "@/components/LinkElement.vue";
 
 export default defineComponent({
   name: 'WelcomeContainer',
-  components: { MainQuote, MainParagraph, RadialGradient, PageTitle, MainVideo },
+  components: {LinkElement, MainQuote, MainParagraph, RadialGradient, PageTitle, MainVideo },
 })
 </script>
 ²
@@ -21,12 +22,12 @@ export default defineComponent({
     <radial-gradient :is-lazy="false" :top="100" :left="-5" :radius-x="30" :radius-y="20" color="red"></radial-gradient>
     <radial-gradient :is-lazy="false" :top="0" :left="100" :radius-x="40" :radius-y="20" color="lightGreen"></radial-gradient>
     <page-title
-      text-content="Welcome, I'm Paul, a Game Programmer!"
+      text-content="Welcome! I am Paul, a Gameplay Programmer."
       class="welcome-title"
     ></page-title>
     <main-quote class="welcome-quote" :delay="1000">
-      M2 Student Game Programming at Rubika / Looking for a 6-month end-of-studies internship from
-      July
+      M2 Student Game Programming at <link-element link="https://rubika-edu.com/">Rubika</link-element> / Looking for a 6-month end-of-studies internship from
+      the 9th June
     </main-quote>
     <div class="welcome-video">
       <main-video  :delay="2000" src="sBiSNkU7gks"></main-video>

@@ -31,7 +31,7 @@ export default defineComponent({
   },
   computed: {
     checkPlatformDeviceIdForRenderMobileMenuBar() {
-      console.log('test')
+
       return this.windowWidth <= this.cssStore.DesktopMinBreakpoint
     },
   },

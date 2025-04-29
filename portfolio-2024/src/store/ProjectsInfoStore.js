@@ -81,7 +81,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.patchs,
         ],
         dofusOverviewPicture,
-        'July 2024 until October 2024 (3 months)','Team ≈70 members, including ≈20 of Game Programmers spread across Client and Server departments, as well as Game Designers, Level Designers, UX/UI Designers, QA specialists, Project Managers, and Game Artists.',
+        'July 2024 to October 2024 (3 months)','Team ≈70 members, including ≈20 of Game Programmers spread across Client and Server departments, as well as Game Designers, Level Designers, UX/UI Designers, QA specialists, Project Managers, and Game Artists.',
         'Client Game Programmer',
         dofusPitch,
         'dIsIL1yv6iA',
@@ -120,7 +120,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
             keypointContentType.video,
           ),
           new ProjectKeypointInfo(
-            'Program on others systems',
+            'Program on other systems',
             dofusKeypointDescriptionOthersTasks,
             [
               allKeypointsTags.controller,
@@ -146,7 +146,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.blueprints,
         ],
         rSMOverviewPicture,
-        'March 2024 until June 2024 / October 2024 until June 2025 (10 months)',
+        'March 2024 to June 2024 / October 2024 to June 2025 (10 months)',
         '2 Game Programmers, 2 Game Designers, 4 Game Artists',
         'Producer, Gameplay Programmer',
         rsmPitch,
@@ -274,7 +274,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
 
       bobyProject: new ProjectInfo(
         'Boby',
-        'A web-based casual arcade game designed for gamification.',
+        'A web-based casual arcade game designed for gamification',
         [
           allProjectsTags.internship,
           allProjectsTags.web,
@@ -283,7 +283,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.boby,
         ],
         bobyOverviewPicture,
-        'July 2022 until September 2022 (2 months)',
+        'July 2022 to September 2022 (2 months)',
         'Team ≈15 members, including UI/UX Designers, Web Developers, Product Owners, Marketing/Communication Managers',
         'Game designer, Gameplay Programmer',
         bobyPitch,
@@ -343,7 +343,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         'A capture-the-point MOBA with ambush mechanics and squirrels.',
         [allProjectsTags.studentProject, allProjectsTags.unity, allProjectsTags.cSharp],
         esquirelOverviewPicture,
-        'November 2022 until February 2023 (2 months)',
+        'November 2022 to February 2023 (2 months)',
         '10 Game Programmers (pre-production) / 4 Game Designers, 2 Game Programmers, 4 Game Artists (production)',
         'Architecture programmer (pre-production) / Lead Gameplay Programmer (production)',
         esquirelPitch,
@@ -413,7 +413,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           allProjectsTags.mobile,
         ],
         jabOverviewPicture,
-        'February 2023 until June 2023 (4 months)',
+        'February 2023 to June 2023 (4 months)',
         '2 Game Programmers / 4 Game Designers, 6 Game Artists',
         'Lead Game Programmer',
         jabPitch,

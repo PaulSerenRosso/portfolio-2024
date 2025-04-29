@@ -28,23 +28,18 @@ export default defineComponent({
   methods: {
     checkNeedToTrigger() {
       const top = this.$refs.revealAnimationTrigger.getBoundingClientRect().top;
-      console.log(top);
       if (this.isFlop) {
 
-        if ((window.innerHeight-top) >0 ) {
-
+        if (top >0 && (window.innerHeight-top) >0 ) {
           clearTimeout(this.timer)
           this.timer = setTimeout(this.launchFlipAnimation, this.delay)
           this.isFlop = false;
-
         }
       } else {
-        if (top <= 0 || (window.innerHeight-top)<0) {
+        if (top <= 0 || top>0 && (window.innerHeight-top) <0 ) {
           clearTimeout(this.timer)
-
           this.timer = setTimeout(this.launchFlopAnimation, this.delay)
           this.isFlop = true
-
         }
       }
     },

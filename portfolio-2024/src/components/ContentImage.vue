@@ -10,9 +10,7 @@ export default defineComponent({
 
     hasAnimation: { Boolean, default: true },
   },
-  mounted() {
-    console.log(this.src)
-  },
+
 })
 </script>
 
