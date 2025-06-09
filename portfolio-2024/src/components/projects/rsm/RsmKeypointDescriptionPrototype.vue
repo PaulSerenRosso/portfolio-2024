@@ -34,9 +34,10 @@ export default defineComponent({
     <main-paragraph>
       I also integrated <bold-element>UI interfaces</bold-element> (inventory, sprint, push) using <bold-element>subwidgets</bold-element> for better
       modularity. I refactored the Vivox system to connect players to the <bold-element>Vivox server</bold-element> when they
-      enter the party, using a <bold-element>game instance subsystem</bold-element>. Finally, I focused on creating quest, items,
-      player actions and spending significant time ensuring the proper initialization and end of the
-      game.
+      enter the party, using a <bold-element>game instance subsystem</bold-element>. At the end of the production, I worked on the <bold-element>end-game conditions</bold-element> and the <bold-element>transitions</bold-element> to the <bold-element>end-game screen</bold-element>, including <bold-element>dynamic cinematics</bold-element> that adapt to the <bold-element>number of players</bold-element> and the <bold-element>outcome of the game</bold-element>. I also implemented <bold-element>player titles</bold-element> based on <bold-element>individual actions</bold-element> during the game.
+      I used the <bold-element>localization dashboard</bold-element> to support both French and English versions of the game. Additionally, I developed the <bold-element>AI spawning</bold-element> and <bold-element>despawning</bold-element> behavior, created a <bold-element>death/spectator mode</bold-element>, and fixed <bold-element>numerous multiplayer bugs</bold-element>.
+
+
     </main-paragraph>
   </div>
 </template>

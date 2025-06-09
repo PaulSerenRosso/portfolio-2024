@@ -17,7 +17,7 @@ export default defineComponent({
       <bold-element>multiplayer</bold-element> and
         <bold-element>voice
           integration</bold-element>. We chose
-          <bold-element>Steam's Listen Server</bold-element> for networking and
+          <bold-element>Steam's Listen Server</bold-element> for networking, multiplayer sessions management and
             <bold-element>Vivox</bold-element> for spatialized voice
               chat. We prototyped a lobby system with
               <bold-element>friend requests</bold-element> and voice features based on in-game

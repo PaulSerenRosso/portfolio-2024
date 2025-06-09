@@ -14,7 +14,7 @@ export default defineComponent({
   <div>
 
     <space-paragraph>
-      RSM is a <bold-element>semi-cooperative</bold-element>, <bold-element>social horror game</bold-element> played in <bold-element>first-person multiplayer</bold-element>. Up to <bold-element>4 players</bold-element> compete with
+      RSM is a <bold-element>social horror game</bold-element> played in <bold-element>first-person multiplayer</bold-element>. Up to <bold-element>4 players</bold-element> compete with
       each other using <bold-element>proximity voice chat</bold-element>. You play as prisoners enrolled in a <bold-element>rehabilitation program</bold-element> run by a <bold-element>mysterious
       private company known as RSM</bold-element>.
     </space-paragraph>

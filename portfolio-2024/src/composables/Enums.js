@@ -5,6 +5,7 @@ export const allProjectsTags = {
   internship: 'Internship',
   steam: 'Released in Steam',
   mobile:"Mobile Game",
+  masterProject: 'Master Project',
 
   blueprints: 'Made with Blueprints',
   cPlusPlus: 'Made with C++',

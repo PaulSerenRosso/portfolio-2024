@@ -136,11 +136,10 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         '/dofusbeta',
       ),
       rsmProject: new ProjectInfo(
-        '[WIP] RSM',
-        'Semi-cooperative social horror game for 4 players',
+        'RSM',
+        'Social horror game for 4 players with betrayals and only one winner',
         [
-          allProjectsTags.studentProject,
-          allProjectsTags.wip,
+          allProjectsTags.masterProject,
           allProjectsTags.unreal,
           allProjectsTags.cPlusPlus,
           allProjectsTags.blueprints,
@@ -150,7 +149,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
         '2 Game Programmers, 2 Game Designers, 4 Game Artists',
         'Producer, Gameplay Programmer',
         rsmPitch,
-        'T7cDLjUOEEQ',
+        'OJ50AKSmgAY',
         [
           new ProjectKeypointInfo(
             'Refine the Game Vision',
@@ -204,7 +203,7 @@ export const useProjectInfoStore = defineStore('projectsInfoStore', {
           ),
 
         ],
-        'darkenBlue',
+        'blue',
         'green',
         '/rsm',
       ),

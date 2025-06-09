@@ -30,7 +30,7 @@ export default defineComponent({
       the 9th June
     </main-quote>
     <div class="welcome-video">
-      <main-video  :delay="2000" src="sBiSNkU7gks"></main-video>
+      <main-video  :delay="2000" src="vik-G4pqntk"></main-video>
     </div>
 
   </div>
