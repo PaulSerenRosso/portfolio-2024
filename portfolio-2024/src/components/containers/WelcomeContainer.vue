@@ -12,7 +12,7 @@ export default defineComponent({
   components: {LinkElement, MainQuote, MainParagraph, RadialGradient, PageTitle, MainVideo },
 })
 </script>
-²
+
 
 <template>
   <div class="welcome-container">
@@ -25,10 +25,7 @@ export default defineComponent({
       text-content="Welcome! I am Paul, a Gameplay Programmer."
       class="welcome-title"
     ></page-title>
-    <main-quote class="welcome-quote" :delay="1000">
-      M2 Student Game Programming at <link-element link="https://rubika-edu.com/">Rubika</link-element> / Looking for a 6-month end-of-studies internship from
-      the 9th June
-    </main-quote>
+
     <div class="welcome-video">
       <main-video  :delay="2000" src="vik-G4pqntk"></main-video>
     </div>
@@ -80,10 +77,8 @@ export default defineComponent({
   text-align: Center;
   width: 100%;
   padding-top: 20px;
+  padding-bottom: 1rem;
 }
 
-.welcome-quote {
-  padding-bottom: 1rem;
-  text-align: Center;
-}
+
 </style>
